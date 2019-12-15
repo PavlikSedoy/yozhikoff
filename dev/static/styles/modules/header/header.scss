@@ -1,0 +1,70 @@
+// Begin header
+.header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: 50% 50%/cover no-repeat url('../images/first-screen-bg.jpg');
+
+  // Begin logo and contacts row
+  &__top-row {
+    padding-top: 62px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo-wr {
+    width: 98px;
+    height: 98px;
+  }
+  // End logo and contacts row
+
+  // Begin header contacts
+  &__contacts {
+    display: flex;
+  }
+
+  &__contact-item {
+    display: flex;
+    align-items: flex-start;
+
+    &:nth-child(2) {
+      margin-left: 55px;
+    }
+
+    &:last-child {
+      margin-left: 135px;
+      text-align: right;
+    }
+  }
+
+  &__contact-img-wr {
+    margin-right: 12px;
+  }
+
+  &__contact-content {
+    font-size: 16px;
+
+    strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 9px;
+    }
+  }
+
+  &__phone-link {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    color: $dark;
+  }
+
+  &__call-request {
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: 300;
+    color: $dark;
+    margin-top: 9px;
+  }
+  // End header contacts
+}
+// End header

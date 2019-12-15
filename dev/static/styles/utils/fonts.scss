@@ -1,0 +1,3 @@
+@include font-face('exo', '../fonts/Exo2/Exo2-Light/Exo2-Light', $weight: 300, $style: normal, $asset-pipeline: false );
+@include font-face('exo', '../fonts/Exo2/Exo2-SemiBold/Exo2-SemiBold', $weight: 600, $style: normal, $asset-pipeline: false );
+@include font-face('exo', '../fonts/Exo2/Exo2-Bold/Exo2-Bold', $weight: 700, $style: normal, $asset-pipeline: false );

@@ -1,0 +1,34 @@
+header.header
+  //- Begin container
+  .container.header__container
+    .row.header__top-row
+      //- Begin logo
+      a.header__logo-wr.logo(href="/")
+        img.logo__img(src="./static/images/logo.svg", alt="Клуб лазерной эпиляции")
+      //- End logo
+
+      //- Begin contacts
+      .header__contacts
+        .header__contact-item
+          .header__contact-img-wr
+            img.contact-img(src="./static/images/svg/geolocation.svg", alt="Location item")
+          .header__contact-content
+            strong м. Площадь Конституции
+            | пер. Театральный, 4<br>2-й этаж, салон “BeautyLine”
+
+        .header__contact-item
+          .header__contact-img-wr
+            img.contact-img(src="./static/images/svg/Clock.svg", alt="Clock item")
+          .header__contact-content
+            strong с 10-00 до 20-00
+            | понедельник -<br>суббота
+
+        .header__contact-item
+          .header__contact-img-wr
+            img.contact-img(src="./static/images/svg/phone.svg", alt="Phone item")
+          .header__contact-content
+            a.header__phone-link(href="tel://+380996277446") +38 (099) 627 74 46
+            a.header__call-request(href="/") Заказать звонок
+      //- End contacts
+    //- End top row
+  //- End container
