@@ -1,5 +1,107 @@
 section.free
+  .free__hearts-bg
+  .free__cloud-bg
+
   .container
     .section-heading
       .section-heading__naming Бесплатное посещение
       h1 Оцените все преимущества<br>лазерной эпиляции<br><span class="yellow">бесплатно!</span>
+      .section-heading__desc
+        p Сделай эпиляцию любой зоны правой половины тела,<br>без каких-то доплат и обязательств.<br><span class="uppercase fw600">абсолютно бесплатно.</span>
+
+    .free__girl-bg
+      img.free__girl-bg-img(src="./static/images/advantages/bg-img.png", alt="background")
+
+    .free__form-row
+      .free__form
+        img.free__form-heart(src="./static/images/advantages/form-heart.png", alt="Heart")
+        .modal-request__in-border
+        .modal-request__heading
+          h3.modal-request__title Перезвоните мне!
+          .modal-request__desc
+            p заказать обратный звонок
+        form.modal-request__form(action="/")
+          .modal-request__communications
+            p.modal-reuest__communications-title Выберите удобный способ для<br>связи специалиста с Вами:
+            .modal-request__communications-row
+              .modal-request__communications-item.communications-item.reqCom.active
+                include ../../static/images/svg/Mobile.svg
+                input#modalCallbackMobile(type="radio", name="requestCommunications" value="mobile" checked)
+              .modal-request__communications-item.reqCom.communications-item
+                include ../../static/images/svg/Telegram.svg
+                input#modalCallbackTelegram(type="radio", name="requestCommunications" value="telegram")
+              .modal-request__communications-item.reqCom.communications-item
+                include ../../static/images/svg/Viber.svg
+                input#modalRequestViber(type="radio", name="requestCommunications" value="viber")
+          .modal-request__input
+            .input
+              input.input__input#freePhone(type="text", inputmode="tel", placeholder="Введите ваш телефон")
+              .input__icon
+                include ../../static/images/svg/Phone-form.svg
+              .input__error-msg
+                span *это поле обязательно к заполнению
+          .modal-request__input
+            .input
+              input.input__input#freeName(type="text", placeholder="Введите ваше имя")
+              .input__icon
+                include ../../static/images/svg/Man.svg
+              .input__error-msg
+                span *это поле обязательно к заполнению
+          .modal-request__btn
+            .btn
+              button.btn__btn(type="button") Заказать звонок
+              .btn__3d
+          .modal-request__checkbox
+            .input-checkbox
+              .input-checkbox__check-wr
+                input#freeAllow(type="checkbox", name="callbackAllow", checked)
+                include ../../static/images/svg/check-mark-form.svg
+              label.input-checkbox__label(for="freeAllow") Я согласен с <a href="/">условиями</a> обработки персональных данных.
+      .free__item.first
+        .circle-icon.free__icon-circle
+          .circle-icon__back-bg
+          .circle-icon__bg
+            include ../../static/images/svg/plus.svg
+        .free__item-content
+          .free__item-head 
+            .free__item-head-shadow
+            | Безопасность
+          .free__item-text
+            p Процедура безопасна для здоровья, лазер не повреждает кожу. Не оставляет ожогов и не вызывает осложнений.
+      .free__item.second
+        .circle-icon.free__icon-circle
+          .circle-icon__back-bg
+          .circle-icon__bg
+            include ../../static/images/svg/plus.svg
+        .free__item-content
+          .free__item-head 
+            .free__item-head-shadow
+            | Безопасность
+          .free__item-text
+            p Процедура безопасна для здоровья, лазер не повреждает кожу. Не оставляет ожогов и не вызывает осложнений.
+        .free__manual
+          .free__manual-text Наведите<br>на кружок
+          .free__manual-image
+            //- include ../../static/images/svg/runner.svg
+      .free__item.third
+        .circle-icon.free__icon-circle
+          .circle-icon__back-bg
+          .circle-icon__bg
+            include ../../static/images/svg/plus.svg
+        .free__item-content
+          .free__item-head 
+            .free__item-head-shadow
+            | Безопасность
+          .free__item-text
+            p Процедура безопасна для здоровья, лазер не повреждает кожу. Не оставляет ожогов и не вызывает осложнений.
+      .free__item.fouth
+        .circle-icon.free__icon-circle
+          .circle-icon__back-bg
+          .circle-icon__bg
+            include ../../static/images/svg/plus.svg
+        .free__item-content
+          .free__item-head 
+            .free__item-head-shadow
+            | Безопасность
+          .free__item-text
+            p Процедура безопасна для здоровья, лазер не повреждает кожу. Не оставляет ожогов и не вызывает осложнений.

@@ -2722,7 +2722,10 @@ $(document).ready(function () {
     // Begin callback form
     var callbackBtn = $('#callbackBtn'),
         whyRequest = $('#whyRequest'),
-        callbackModal = $('#callback');
+        callbackModal = $('#callback'),
+        freePhone = $('#freePhone');
+
+    $(freePhone).inputmask({"mask": "+38 (999) 999-99-99"});
 
     $(callbackBtn).add(whyRequest).click( function(e) {
         e.stopPropagation();
@@ -2750,4 +2753,12 @@ $(document).ready(function () {
         }
     });
     // End close modal
+
+    // Begin hover item content
+    $('.free__icon-circle').hover( function() {
+        $(this).next().fadeIn();
+    }, function() {
+        $(this).next().fadeOut();
+    });
+    // End hover item content
 });

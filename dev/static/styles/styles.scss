@@ -116,5 +116,13 @@ button { outline: none; font-family: $font; color: $dark; }
   text-align: right;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fw600 {
+  font-weight: 600;
+}
+
 //Модули
 @import "modules/modules";
