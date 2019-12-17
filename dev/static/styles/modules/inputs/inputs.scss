@@ -1,0 +1,106 @@
+.input {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: rgba(252, 251, 250, 1);
+  border-radius: 10px;
+  box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+  transition: .3s ease;
+
+  &.error {
+    border: 1px solid $coralPink;
+
+    .input__error-msg {
+      opacity: 1;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: transparent;
+    padding: 0 50px;
+    border: none;
+
+    &:focus ~ .input__icon svg path {
+      fill: $mikadoYellow;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg path {
+      fill: $dark;
+      transition: .3s ease;
+    }
+  }
+
+  &__error-msg {
+    position: absolute;
+    bottom: -15px;
+    left: 25px;
+    font-size: 12px;
+    font-weight: 300;
+    color: $coralPink;
+    opacity: 0;
+    transition: .3s ease;
+  }
+}
+
+// Begin checkbox
+.input-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__check-wr {
+    flex-basis: 20px;
+    height: 20px;
+    background-color: $davyGray;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0;
+
+      & ~ svg {
+        opacity: 0;
+        transition: .3s ease;
+      }
+
+      &:checked ~ svg {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__label {
+    flex-basis: calc(100% - 35px);
+    margin-left: 15px;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: left;
+
+    a {
+      text-decoration: underline;
+      font-size: 12px;
+      font-weight: 300;
+      color: $dark;
+    }
+  }
+}
+// End checkbox

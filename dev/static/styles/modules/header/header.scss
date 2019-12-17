@@ -3,13 +3,43 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  background: 50% 50%/cover no-repeat url('../images/first-screen-bg.jpg');
+  background-color: $oldLace;
+
+  &:before, &:after {
+    @include pseudo;
+    top: 0;
+    height: 100%;
+    z-index: z('bg');
+  }
+
+  &:before {
+    background: 50% 50%/cover no-repeat url('../images/header/header-bg.png');
+    width: 100%;
+    left: 0;
+  }
+
+  &:after {
+    background: 50% 50%/contain no-repeat url('../images/header/hearts-bg.png');
+    width: 96%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+    z-index: z('content');
+  }
 
   // Begin logo and contacts row
   &__top-row {
     padding-top: 62px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__logo-wr {
@@ -42,7 +72,9 @@
   }
 
   &__contact-content {
+    position: relative;
     font-size: 16px;
+    z-index: z('content');
 
     strong {
       display: block;
@@ -51,20 +83,409 @@
     }
   }
 
+  &__phone-link, &__call-request {
+    color: $dark;
+    transition: .3s ease;
+
+    &:hover {
+      color: $mikadoYellow;
+    }
+  }
+
   &__phone-link {
     font-size: 20px;
     font-weight: 600;
     display: block;
-    color: $dark;
   }
 
   &__call-request {
     font-size: 16px;
     text-decoration: underline;
     font-weight: 300;
-    color: $dark;
-    margin-top: 9px;
+    margin-top: 6px;
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
   // End header contacts
+
+  &__bottom-row {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 40px;
+
+    &>div {
+      flex-basis: 50%;
+    }
+  }
+
+  // Begin header left side
+  &__btn-wr {
+    margin-top: 73px;
+    width: 360px;
+    height: 90px;
+  }
+
+  &__advantages {
+    margin-top: 85px;
+    display: flex;
+
+    &>article {
+      margin-left: 85px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  // End header left side
+
+  // Begin header right side
+  &__right-side {
+    position: relative;
+
+    &:before {
+      @include pseudo;
+      left: 0;
+      bottom: -40px;
+      width: 100%;
+      height: calc(100vh - 135px);
+      background: 50% 100%/contain no-repeat url('../images/header/medical-girl.png');
+      z-index: z('bg');
+    }
+  }
+
+  &__play-btn {
+    position: absolute;
+    bottom: 150px;
+    left: 65px;
+    z-index: z('content');
+  }
+  // End header right side
+
+  // Begin hamburger
+  &__hamburger {
+    position: absolute;
+    left: -140px;
+    top: 100px;
+  }
+  // End hamburger
+
+  &__scroll {
+    position: absolute;
+    bottom: 40px;
+    left: -50px;
+  }
+
+  &__social {
+    position: absolute;
+    bottom: 40px;
+    left: calc(100% + 10px);
+  }
 }
 // End header
+
+// Begin header advantages item
+.header-advantages {
+  &__img-wr {
+    width: 80px;
+    height: 80px;
+    background-color: $white;
+    border-radius: 50%;
+    margin-left: 10px;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    max-height: 80px;
+    right: 0;
+    top: 0;
+  }
+
+  &__circle-icon {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    margin-top: 15px;
+  }
+}
+// End header advantages item
+
+// Begin play button
+.play-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 195px;
+  height: 195px;
+  border: none;
+  background: transparent;
+  
+  &__icon {
+    border-left: 25px solid $mikadoYellow;
+    border-top: 15px solid transparent;
+    border-right: none;
+    border-bottom: 15px solid transparent;
+    transition: .3s ease;
+    z-index: z('content');
+    position: relative;
+  }
+
+  &:before, &:after {
+    @include pseudo;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  &:before {
+    width: 129px;
+    height: 129px;
+    border: 1px solid;
+    border-image: linear-gradient(to right, $mikadoYellow 0%, transparent 100%);
+    border-image-slice: 1;
+    // border: 1px solid $mikadoYellow;
+    border-radius: 50%;
+    // -webkit-mask-image: -webkit-gradient(linear, left, 
+    // riht, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    transition: .3s ease;
+    z-index: z('bg');
+  }
+
+  &:after {
+    width: 195px;
+    height: 195px;
+    border: 2px solid;
+    border-image: linear-gradient(to right, $mikadoYellow 0%, transparent 100%);
+    border-image-slice: 1;
+    // border: 1px solid $mikadoYellow;
+    border-radius: 50%;
+    // -webkit-mask-image: -webkit-gradient(linear, left, 
+    // riht, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &:before {
+      background: $mikadoYellow;
+    }
+
+    .play-btn__icon {
+      border-left-color: $white;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    left: calc(100% - 32px);
+    bottom: -11px;
+    font-size: 16px;
+    font-weight: 300;
+    width: 100px;
+    line-height: 20px;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+// End play button
+
+// Begin hamburger
+.hamburger {
+  display: flex;
+  border: none;
+  background: transparent;
+  align-items: center;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__icon {
+    margin-left: 22px;
+    position: relative;
+    height: 22px;
+    width: 30px;
+    border-top: 2px solid $dark;
+    border-bottom: 2px solid $dark;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .3s ease;
+  }
+
+  &__icon-line {
+    height: 2px;
+    display: block;
+    transition: .3s ease;
+
+    &:first-child {
+      width: 8px;
+      background-color: $mikadoYellow;
+    }
+
+    &:last-child {
+      width: 18px;
+      background-color: $dark;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .hamburger__icon {
+      border-top-color: $mikadoYellow;
+      border-bottom-color: $mikadoYellow;
+
+      .hamburger__icon-line {
+        &:first-child {
+          background-color:$dark;
+        }
+
+        &:last-child {
+          background-color: $mikadoYellow;
+        }
+      }
+    }
+  }
+}
+// End hamburger
+
+// Begin social
+.social {
+  width: 135px;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  &__item {
+    width: 50px;
+    height: 50px;
+    position: relative;
+
+    &:first-child {
+      margin-right: 11px;
+    }
+
+    &:last-child {
+      margin-left: 11px;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(252, 251, 250, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    transition: .3s ease;
+
+    svg {
+      height: 20px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      path {
+        fill: $dark;
+      }
+    }
+
+    &:hover {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+// End social
+
+// Begin scroll info
+.scroll {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 84px;
+  align-items: center;
+
+  &__text {
+    position: relative;
+    height: 100px;
+    width: 16px;
+
+    span {
+      width: 100%;
+      display: block;
+      letter-spacing: 0.1em;
+      transform: skew(-1deg, 1deg);
+      font-weight: 600;
+      font-size: 16px;
+      text-transform: uppercase;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      white-space: nowrap;
+      font-weight: 600;
+    }
+  }
+
+  &__mouse {
+    width: 14px;
+    height: 20px;
+    border-radius: 7px;
+    border: 1px solid $dark;
+    position: relative;
+
+    &:before {
+      @include pseudo;
+      left: 50%;
+      top: 6px;
+      height: 3px;
+      width: 1px;
+      background-color: $dark;
+    }
+  }
+
+  &:after {
+    @include pseudo;
+    height: 64px;
+    width: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $dark;
+  }
+}
+// End scroll info

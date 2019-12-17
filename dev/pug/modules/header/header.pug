@@ -1,6 +1,35 @@
 header.header
   //- Begin container
   .container.header__container
+    //- Begin hamburger
+    .header__hamburger
+      button.hamburger#hamburger(type="button")
+        span.hamburger__title Меню
+        .hamburger__icon
+          span.hamburger__icon-line
+          span.hamburger__icon-line
+    //- End hamburger
+
+    //- Begin scroll info
+    .header__scroll.scroll
+      .scroll__text
+        span Листай дальше
+      .scroll__mouse
+    //- End scroll info
+
+    //- Begin social
+    .social.header__social
+      .social__title
+        span Подписывайтесь на наши соц. сети
+        .row.social__row
+          .social__item
+            a.social__link(href="/")
+              include ../../../static/images/svg/Instagram.svg
+          .social__item
+            a.social__link(href="/")
+              include ../../../static/images/svg/Facebook.svg
+    //- End social
+
     .row.header__top-row
       //- Begin logo
       a.header__logo-wr.logo(href="/")
@@ -28,7 +57,68 @@ header.header
             img.contact-img(src="./static/images/svg/phone.svg", alt="Phone item")
           .header__contact-content
             a.header__phone-link(href="tel://+380996277446") +38 (099) 627 74 46
-            a.header__call-request(href="/") Заказать звонок
+            button.header__call-request#callbackBtn(type="button") Заказать звонок
       //- End contacts
     //- End top row
+
+    //- Begin bottom row
+    .row.header__bottom-row
+      //- Begin header left side
+      .header__left-side
+        //- Begin header main content
+        .header__content
+          .section-heading
+            h1 Твоё идеально гладкое тело по лучшей цене<br>в городе!
+            .section-heading__desc
+              p Безопасное удаление волос по любому типу кожи.<br>Без ожогов и максимально безболезненно.<br>Результат уже после первых процедур!
+          .header__btn-wr
+            .btn.btn__fz_18.header__btn
+              button.btn__btn#freeAdmissionBtn(type="button") Попробовать бесплатно
+              .btn__3d
+        //- End header main content
+
+        .row.header__advantages
+          //- Begin header advantages item
+          article.header-advantages
+            .header-advantages__img-wr
+              img.header-advantages__img(src="./static/images/header/best-price.png", alt="Гарантия лучшей цены")
+              .header-advantages__circle-icon.circle-icon
+                .circle-icon__back-bg
+                .circle-icon__bg
+                  include ../../../static/images/svg/check.svg
+            h4.header-advantages__title Гарантия<br>лучшей цены
+          //- End header advantages item
+
+          //- Begin header advantages item
+          article.header-advantages
+            .header-advantages__img-wr
+              img.header-advantages__img(src="./static/images/header/lazer.png", alt="Гарантия лучшей цены")
+              .header-advantages__circle-icon.circle-icon
+                .circle-icon__back-bg
+                .circle-icon__bg
+                  include ../../../static/images/svg/check.svg
+            h4.header-advantages__title Новейший<br>лазер
+          //- End header advantages item
+
+          //- Begin header advantages item
+          article.header-advantages
+            .header-advantages__img-wr
+              img.header-advantages__img(src="./static/images/header/srtificate.png", alt="Гарантия лучшей цены")
+              .header-advantages__circle-icon.circle-icon
+                .circle-icon__back-bg
+                .circle-icon__bg
+                  include ../../../static/images/svg/check.svg
+            h4.header-advantages__title Сертифицированные<br>специалисты
+          //- End header advantages item
+
+      //- End header left side
+
+      //- Begin header right side
+      .header__right-side
+        .header__play-btn
+          button.play-btn(type="button")
+            .play-btn__icon
+          .play-btn__text Узнайте все<br><span>о нас</span><br>за 30 секунд.
+      //- End header right side
+    //- End bottom row
   //- End container

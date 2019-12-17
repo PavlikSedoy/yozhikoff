@@ -5,3 +5,18 @@
 @import "small-blocks/small-blocks";
 @import "container/container";
 @import "logo/logo.scss";
+@import "circle-icon/circle-icon.scss";
+@import "modals/modals.scss";
+@import "inputs/inputs.scss";
+@import "why/why.scss";
+
+@media screen and (max-width: 1530px) {
+  .section-heading {
+    h1, h2 {
+      font-size: 43px;
+    }
+  }
+
+  @import "container/media/container-to-1200.scss";
+  @import "header/header-to-1200.scss";
+}

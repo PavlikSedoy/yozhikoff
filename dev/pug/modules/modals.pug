@@ -1,0 +1,145 @@
+//- Begin navigation
+.modal-nav#modalNav
+  //- Begin modal nav container
+  .modal-nav__container.container
+    .modal-nav__close
+      .close
+        button#modalNavClose(type="button")
+    nav.modal-nav__nav
+      ul
+        li
+          a.modal-link(href="#why-us") Почему мы
+        li
+          a.modal-link(href="#advantages") Преимущества
+        li
+          a.modal-link(href="#result") Результат
+        li
+          a.modal-link(href="#actions") Акции
+        li
+          a.modal-link(href="#catalog") Прайс
+        li
+          a.modal-link(href="#reviews") Отзывы
+        li
+          a.modal-link(href="#faq") Ответы на вопросы
+        li
+          a(href="#contacts") Контакты
+    .social.modal-nav__social
+      .social__title
+        span Подписывайтесь на наши соц. сети
+        .row.social__row
+          .social__item
+            a.social__link(href="/")
+              include ../../static/images/svg/Instagram.svg
+          .social__item
+            a.social__link(href="/")
+              include ../../static/images/svg/Facebook.svg
+    .modal-nav__btn-wr
+      .btn.btn__fz_14
+        button.btn__btn(type="button") позвоните мне
+        .btn__3d
+  //- End modal nav container
+//- End navigation
+
+//- Begin free admission
+.modal-request#freeAdmission
+  .modal-request__in
+    .modal-request__in-border
+    .modal-request__close
+      .close.close__type_3d.close__color_gray
+        .close__bg
+        .close__3d
+        button.modal-request__close(type="button")
+    .modal-request__heading
+      h3.modal-request__title Оставьте заявку
+      .modal-request__desc
+        p на бесплатное посещение
+    form.modal-request__form(action="/")
+      .modal-request__communications
+        p.modal-reuest__communications-title Выберите удобный способ для<br>связи специалиста с Вами:
+        .modal-request__communications-row
+          .modal-request__communications-item.communications-item.reqCom.active
+            include ../../static/images/svg/Mobile.svg
+            input#modalRequestMobile(type="radio", name="requestCommunications" value="mobile" checked)
+          .modal-request__communications-item.reqCom.communications-item
+            include ../../static/images/svg/Telegram.svg
+            input#modalRequestTelegram(type="radio", name="requestCommunications" value="telegram")
+          .modal-request__communications-item.reqCom.communications-item
+            include ../../static/images/svg/Viber.svg
+            input#modalRequestViber(type="radio", name="requestCommunications" value="viber")
+        .modal-request__input
+          .input
+            input.input__input#freeAdmissionPhone(type="text", inputmode="tel", placeholder="Введите ваш телефон")
+            .input__icon
+              include ../../static/images/svg/Phone-form.svg
+            .input__error-msg
+              span *это поле обязательно к заполнению
+        .modal-request__input
+          .input
+            input.input__input#freeAdmissionName(type="text", placeholder="Введите ваше имя")
+            .input__icon
+              include ../../static/images/svg/Man.svg
+            .input__error-msg
+              span *это поле обязательно к заполнению
+        .modal-request__btn
+          .btn
+            button.btn__btn(type="button") Записаться бесплатно
+            .btn__3d
+        .modal-request__checkbox
+          .input-checkbox
+            .input-checkbox__check-wr
+              input#freeAdmissionAllow(type="checkbox", name="freeAdmissionAllow", checked)
+              include ../../static/images/svg/check-mark-form.svg
+            label.input-checkbox__label(for="freeAdmissionAllow") Я согласен с <a href="/">условиями</a> обработки персональных данных.
+//- End free admission
+
+//- Begin callback
+.modal-request#callback
+  .modal-request__in
+    .modal-request__in-border
+    .modal-request__close
+      .close.close__type_3d.close__color_gray
+        .close__bg
+        .close__3d
+        button.modal-request__close(type="button")
+    .modal-request__heading
+      h3.modal-request__title Перезвоните мне!
+      .modal-request__desc
+        p заказать обратный звонок
+    form.modal-request__form(action="/")
+      .modal-request__communications
+        p.modal-reuest__communications-title Выберите удобный способ для<br>связи специалиста с Вами:
+        .modal-request__communications-row
+          .modal-request__communications-item.communications-item.reqCom.active
+            include ../../static/images/svg/Mobile.svg
+            input#modalCallbackMobile(type="radio", name="requestCommunications" value="mobile" checked)
+          .modal-request__communications-item.reqCom.communications-item
+            include ../../static/images/svg/Telegram.svg
+            input#modalCallbackTelegram(type="radio", name="requestCommunications" value="telegram")
+          .modal-request__communications-item.reqCom.communications-item
+            include ../../static/images/svg/Viber.svg
+            input#modalRequestViber(type="radio", name="requestCommunications" value="viber")
+        .modal-request__input
+          .input
+            input.input__input#callbackPhone(type="text", inputmode="tel", placeholder="Введите ваш телефон")
+            .input__icon
+              include ../../static/images/svg/Phone-form.svg
+            .input__error-msg
+              span *это поле обязательно к заполнению
+        .modal-request__input
+          .input
+            input.input__input#callbackName(type="text", placeholder="Введите ваше имя")
+            .input__icon
+              include ../../static/images/svg/Man.svg
+            .input__error-msg
+              span *это поле обязательно к заполнению
+        .modal-request__btn
+          .btn
+            button.btn__btn(type="button") Заказать звонок
+            .btn__3d
+        .modal-request__checkbox
+          .input-checkbox
+            .input-checkbox__check-wr
+              input#callbackAllow(type="checkbox", name="callbackAllow", checked)
+              include ../../static/images/svg/check-mark-form.svg
+            label.input-checkbox__label(for="callbackAllow") Я согласен с <a href="/">условиями</a> обработки персональных данных.
+//- End callback

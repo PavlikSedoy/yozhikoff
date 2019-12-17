@@ -27,7 +27,11 @@
   }
 }
 $z-indexes: (
-  "content"
+  "modal",
+  "btn",
+  "btn-3d",
+  "content",
+  "bg"
 );
 
 @mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) {
