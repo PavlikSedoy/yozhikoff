@@ -1,3 +1,153 @@
 .why {
   padding-top: 140px;
+  padding-bottom: 230px;
+
+  &__gradient-bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    background-image: linear-gradient(rgba(255, 255, 255, 1) 0%, $oldLace 100%);
+  }
+
+  // Begin roses bg
+  &__roses-bg {
+    height: 450px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: z('bg');
+    background: 50% 50%/cover no-repeat url('../images/why/roses.png');
+  }
+  // End roses bg
+
+  // Begin girl
+  &__content-row {
+    padding: 0 15px;
+    margin-top: 85px;
+    position: relative;
+    z-index: z('content');
+  }
+
+  &__image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image-bg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 460px;
+    height: 460px;
+    background-color: $oldLace;
+    border-radius: 50%;
+
+    &:before, &:after {
+      @include pseudo;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid $oldLace;
+      border-radius: 50%;
+    }
+
+    &:before {
+      width: 602px;
+      height: 602px;
+    }
+
+    &:after {
+      width: 750px;
+      height: 750px;
+    }
+  }
+
+  &__image {
+    position: relative;
+  }
+  // End girl
+
+  // Begin content
+  &__item {
+    display: flex;
+    position: absolute;
+    z-index: z('content');
+
+    &.result {
+      top: -90px;
+      left: -310px;
+    }
+
+    &.kosmos {
+      top: 75px;
+      left: -500px;
+    }
+
+    &.sovest {
+      top: 240px; 
+      left: -500px;
+    }
+
+    &.price {
+      top: -85px;
+      right: -280px;
+    }
+
+    &.mother {
+      top: 95px;
+      right: -520px;
+    }
+
+    &.kungh-fu {
+      top: 310px;
+      right: -490px;
+    }
+  }
+
+  &__item-title {
+    font-size: 18px;
+    color: $dark;
+    line-height: 45px;
+  }
+
+  &__item-img {
+    margin-top: 8px;
+  }
+
+  &__item-content {
+    &.text-right {
+      margin-right: 18px;
+    }
+
+    &.text-left {
+      margin-left: 18px;
+    }
+  }
+
+  &__item-desc {
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 20px;
+    }
+  }
+  // End content
+
+  // Begin btn
+  &__btn-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+  }
+
+  &__btn {
+    width: 280px;
+    height: 70px;
+  }
+  // End btn
 }

@@ -55,6 +55,11 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
     font-weight: 600;
     position: relative;
     margin-bottom: 15px;
+    margin-left: 98px;
+
+    &.center {
+      margin-left: 0;
+    }
 
     &:before {
       @include pseudo;
@@ -105,6 +110,10 @@ button { outline: none; font-family: $font; color: $dark; }
 
 .row {
   width: 100%;
+}
+
+.text-right {
+  text-align: right;
 }
 
 //Модули

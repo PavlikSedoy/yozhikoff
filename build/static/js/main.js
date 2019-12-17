@@ -2721,9 +2721,10 @@ $(document).ready(function () {
 
     // Begin callback form
     var callbackBtn = $('#callbackBtn'),
+        whyRequest = $('#whyRequest'),
         callbackModal = $('#callback');
 
-    $(callbackBtn).click( function(e) {
+    $(callbackBtn).add(whyRequest).click( function(e) {
         e.stopPropagation();
 
         $(callbackModal).fadeIn();
