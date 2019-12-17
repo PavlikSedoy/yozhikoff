@@ -12,9 +12,9 @@
   }
 
   &__girl-bg-img {
-    width: 130%;
+    width: 100%;
     position: absolute;
-    left: -20%;
+    left: 0%;
     top: 100px;
   }
   
@@ -92,23 +92,23 @@
     }
 
     &.first {
-      left: 70px;
-      bottom: 300px;  
+      left: 250px;
+      bottom: 330px; 
     }
 
     &.second {
-      left: 310px;
-      bottom: 350px;  
+      left: 470px;
+      bottom: 370px;
     }
 
     &.third {
-      bottom: 170px;
-      left: 450px;
+      bottom: 200px;
+      left: 600px;
     }
 
     &.fouth {
-      bottom: 510px;
-      left: 570px;
+      bottom: 540px;
+      left: 720px;
     }
   }
 

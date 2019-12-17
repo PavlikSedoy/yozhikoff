@@ -1,0 +1,117 @@
+.result {
+  padding-top: 90px;
+  padding-bottom: 150px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__side {
+    flex-basis: 50%;
+
+    &:last-child {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &__list-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 40px;
+  }
+
+  li {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 30px;
+    padding-left: 30px;
+    position: relative;
+    display: block;
+
+    &:before {
+      @include pseudo;
+      left: 0;
+      top: 10px;
+      width: 12px;
+      height: 12px;
+      background-image: linear-gradient(rgba(255, 217, 144, 1) 0%, rgba(252, 191, 18, 1) 100%);
+      border-radius: 50%;
+    }
+
+    &:after {
+      @include pseudo;
+      left: 2px;
+      top: 12px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: $white;
+    }
+  }
+
+  &__btn-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  &__btn {
+    width: 280px;
+    height: 70px;
+  }
+
+  &__ba-wr {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 2px solid $oldLace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__ba-img-wr {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $oldLace;
+
+    .twentytwenty-overlay {
+      display: none;
+    }
+
+    .twentytwenty-handle {
+      width: 40px;
+      height: 40px;
+      background-image: linear-gradient(rgba(255, 217, 144, 1) 0%, rgba(252, 191, 18, 1) 100%);
+      border: 10px solid $white;
+      box-shadow: none;
+      margin-left: -30px;
+
+      &:before, &:after {
+        box-shadow: none;
+        margin-left: -2.5px;
+      }
+    }
+
+    .twentytwenty-right-arrow {
+      border-left-color: $dark;
+    }
+
+    .twentytwenty-left-arrow {
+      border-right-color: $dark;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: 50% 100%/contain no-repeat url('../images/result/result-bg.png');
+  }
+}
