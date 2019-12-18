@@ -3572,4 +3572,10 @@ $(document).ready(function () {
         },
       })
     // End reviews slider
+
+    $('.faq-item').click( function() {
+        $(this).toggleClass('active');
+
+        $(this).children('.faq-item__content').slideToggle();
+    });
 });
