@@ -255,9 +255,9 @@
     width: 129px;
     height: 129px;
     border: 1px solid;
-    border-image: linear-gradient(to right, $mikadoYellow 0%, transparent 100%);
-    border-image-slice: 1;
-    // border: 1px solid $mikadoYellow;
+    // border-image: linear-gradient(to right, $mikadoYellow 0%, transparent 100%);
+    // border-image-slice: 1;
+    border: 1px solid $mikadoYellow;
     border-radius: 50%;
     // -webkit-mask-image: -webkit-gradient(linear, left, 
     // riht, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
@@ -269,9 +269,9 @@
     width: 195px;
     height: 195px;
     border: 2px solid;
-    border-image: linear-gradient(to right, $mikadoYellow 0%, transparent 100%);
-    border-image-slice: 1;
-    // border: 1px solid $mikadoYellow;
+    // border-image: linear-gradient(to right, $mikadoYellow 0%, transparent 100%);
+    // border-image-slice: 1;
+    border: 1px solid $mikadoYellow;
     border-radius: 50%;
     // -webkit-mask-image: -webkit-gradient(linear, left, 
     // riht, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));

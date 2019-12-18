@@ -1,0 +1,169 @@
+.reviews {
+  padding-top: 275px;
+  padding-bottom: 200px;
+  background: $oldLace;
+
+  .section-heading {
+    padding-left: 40%;
+  }
+
+  &__top-bg-gradient {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background-image: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba($oldLace, 1) 100%);
+    position: absolute;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__slide-content {
+    height: 357px;
+    width: 829px;
+    background: $white;
+    border-radius: 10px;
+    position: relative;
+
+    &:before {
+      @include pseudo;
+      left: 8px;
+      top: 8px;
+      width: calc(100% - 16px);
+      height: calc(100% - 16px);
+      border-radius: 10px;
+      border: 1px solid rgba($dark, .1);
+      z-index: 1;
+    }
+  }
+
+  &__slider {
+    margin-top: 60px;
+  }
+
+  &__slide-in {
+    position: relative;
+    z-index: z('content');
+    padding: 40px 70px 40px 200px;
+  }
+
+  &__slide-img {
+    position: absolute;
+    left: -170px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 340px;
+    height: 720px;
+    background: 50% 50%/contain no-repeat url('../images/reviews/phone.png');
+  }
+
+  &__slide-title {
+    display: flex;
+
+    img {
+      width: 26px;
+      height: 26px;
+      margin-right: 20px;
+    }
+
+    h3 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__slide-text {
+    margin-top: 18px;
+  }
+
+  &__comentator {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatart-wr {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__user-info > span {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__user-insta {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      margin-right: 10px;
+
+      path {
+        fill: $dark;
+      }
+    }
+
+    span {
+      font-size: 14px;
+      text-decoration: underline;
+      color: $dark;
+    }
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    top: auto;
+    bottom: 50px;
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(rgba(255, 217, 144, 1) 0%, rgba(252, 191, 18, 1) 100%);
+    border-radius: 50%;
+
+    &:after {
+      font-size: 16px;
+      color: $dark;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+  }
+
+  &__swiper-container {
+    position: relative;
+  }
+
+  .swiper-button-next {
+    right: 80px;
+  }
+
+  .swiper-button-prev {
+    right: 150px;
+    left: auto;
+  }
+
+  &__bottom-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // z-index: z('up-content');
+    background: 50% 100%/contain no-repeat url('../images/reviews/bg.png');
+  }
+}

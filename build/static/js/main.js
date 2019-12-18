@@ -3543,4 +3543,33 @@ $(document).ready(function () {
             $('#tableLags').fadeIn().css('display', 'table') }, 500);
     });
     // End pricing
+
+    // Begin actions slider
+    var actionsSlider = new Swiper ('.actions__swiper-container', {
+        // Optional parameters
+        width: 500,
+        spaceBetween: 30,
+        
+        // Navigation arrows
+        navigation: {
+          nextEl: '.actions__swiper-button-next',
+          prevEl: '.actions__swiper-button-prev',
+        },
+      })
+    // End actions slider
+
+    // Begin reviews slider
+    var reviewsSlider = new Swiper ('.reviews__swiper-container', {
+        // Optional parameters
+        slidesPrePage: 1,
+        centeredSlides: true,
+        spaceBetween: 500,
+        
+        // Navigation arrows
+        navigation: {
+          nextEl: '.reviews__swiper-button-next',
+          prevEl: '.reviews__swiper-button-prev',
+        },
+      })
+    // End reviews slider
 });
