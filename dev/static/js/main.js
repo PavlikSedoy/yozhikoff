@@ -3518,4 +3518,29 @@ $(document).ready(function () {
     // Begin result
     $(".result__ba-img-wr").twentytwenty();
     // End result
+
+    // Begin pricing
+    $('.price__tab-btn').click( function() {
+        $('.price__tabs').find('.active').removeClass('active');
+
+        $(this).parent().addClass('active');
+
+        $('.price__table').each( function() {
+            $(this).fadeOut();
+        });
+
+        var priceTabName = $(this).data('part');
+
+        if (priceTabName == 'face') setTimeout( function() {
+            $('#tableFace').fadeIn().css('display', 'table') }, 500);
+        else if (priceTabName == 'hands') setTimeout( function() {
+            $('#tableHands').fadeIn().css('display', 'table') }, 500);
+        else if (priceTabName == 'body') setTimeout( function() {
+            $('#tableBody').fadeIn().css('display', 'table') }, 500);
+        else if (priceTabName == 'intim') setTimeout( function() {
+            $('#tableIntim').fadeIn().css('display', 'table') }, 500);
+        else if (priceTabName == 'lags') setTimeout( function() {
+            $('#tableLags').fadeIn().css('display', 'table') }, 500);
+    });
+    // End pricing
 });
