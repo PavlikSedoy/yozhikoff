@@ -1,1 +1,98 @@
-footer { flex: 0 0 auto; }
+.footer {
+  padding-top: 30px;
+
+  &__row {
+    &:first-child {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &:last-child {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 7px;
+      padding-bottom: 20px;
+      font-size: 12px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo__img {
+    width: 98px;
+  }
+
+  &__logo-text {
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  .social {
+    width: auto;
+  }
+
+  .social__title {
+    display: flex;
+    align-items: center;
+
+    span {
+      display: block;
+      width: 140px;
+    }
+  }
+
+  .social__row {
+    width: 150px;
+    justify-content: flex-end;
+  }
+
+  &__call {
+    display: flex;
+  }
+
+  .contact-img {
+    width: 20px;
+    margin-right: 10px;
+  }
+
+  .header__phone-link {
+    font-size: 18px;
+  }
+
+  &__call-row {
+
+    &:last-child {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-wr {
+    width: 195px;
+    height: 50px;
+    margin-left: 50px;
+  
+    button {
+      font-size: 14px;
+    }
+  }
+
+  &__privacy-police {
+    text-decoration: underline;
+    color: $dark;
+    margin-right: 20px;
+  }
+}

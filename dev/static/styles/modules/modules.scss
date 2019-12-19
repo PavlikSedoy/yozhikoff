@@ -16,6 +16,7 @@
 @import "reviews/reviews.scss";
 @import "faq/faq.scss";
 @import "questions/questions.scss";
+@import "map/map.scss";
 
 @media screen and (max-width: 1530px) {
   .section-heading {
@@ -26,4 +27,5 @@
 
   @import "container/media/container-to-1200.scss";
   @import "header/header-to-1200.scss";
+  @import "footer/footer-to-1200.scss";
 }

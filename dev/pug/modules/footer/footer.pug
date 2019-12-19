@@ -1,1 +1,36 @@
 footer.footer
+  .container
+    .footer__row
+      .footer__logo
+        .footer__logo-img.logo(href="/")
+          img.logo__img(src="./static/images/logo.svg", alt="Клуб лазерной эпиляции")
+        .footer__logo-text Клуб<br>лазерной<br>эпиляции
+      .footer__social
+        .social
+          .social__title
+            span Подписывайтесь на наши соц. сети
+            .row.social__row
+              .social__item
+                a.social__link(href="/")
+                  include ../../../static/images/svg/Instagram.svg
+              .social__item
+                a.social__link(href="/")
+                  include ../../../static/images/svg/Facebook.svg
+      .footer__contacts
+        .footer__call
+          .footer__call-icon
+            img.contact-img(src="./static/images/svg/phone.svg", alt="Phone item")
+          .footer__call-content
+            .footer__call-row
+              a.header__phone-link(href="tel://+380996277446") +38 (099) 627 74 46
+            .footer__call-row
+              span Телефон
+              span Viber
+              span Telegram
+        .footer__btn-wr
+          .btn.footer__btn
+            button.btn__btn#freeAdmissionBtn(type="button") позвоните мне
+            .btn__3d
+    .footer__row
+      a.footer__privacy-police(href='/') Политика конфиденциальности
+      span Все права защищены (с) 2019-2020
