@@ -1,0 +1,72 @@
+section.questions
+  .container
+    .questions__bg
+
+    .section-heading
+      .section-heading__naming Online - Консультация
+      h2 Остались <span class="yellow">вопросы?</span>
+      .section-heading__desc
+        p Задай их нашему сертифицированному<br>специалисту прямо сейчас!
+
+    .questions__row
+      .questions__col
+        .questions__content
+          p Вы можете быть уверены, наши мастера действительно лучшие! Мы постоянно повышаем мастерство и квалификацию, обучаемся и развиваемся в нашей профессии, именно поэтому качество наших услуг является самым высоким на рынке.
+
+          p Наша главная цель - это безопасное и максимально комфортное удаление нежелательных волос навсегда! С чем мы успешно справляемся уже много лет.
+
+          p Отзывы и результаты говорят сами за себя, 98,5% довольных клиентов, которые завершили курс и уже давно забыли о нежелательной растительности.
+
+          p Хочешь быть уверен в результате лазерной эпиляции? Тогда стоит её сделать в Ёжикофф клаб, мы гарантируем результат уже после первой процедуры.
+        
+        .questions__info
+          .questions__info-icon
+            include ../../static/images/svg/info.svg
+          .questions__info-text Почему важно обращаться<br>именно к профессионалам?
+          .questions__info-hidden
+            h3 Мы заботимся о тебе и твоей безопасности!
+            p Настоящий специалист должен знать все о аппарате и легко определять Ваш тип кожи по Фитцпатрику. В ином случае могут быть риски для вашего здоровья. Профессионал никогда не будет рисковать здоровьем своего пациента.
+
+            p Мы не экономим на импульсах, обслуживании оборудования и обучении наших мастеров!
+      .questions__col
+        .questions__form
+          form.modal-request__form(action="/")
+            .modal-request__communications
+              p.modal-reuest__communications-title Выберите удобный способ для<br>связи специалиста с Вами:
+              .modal-request__communications-row
+                .modal-request__communications-item.communications-item.reqCom.active
+                  include ../../static/images/svg/Mobile.svg
+                  input#questionsCallbackMobile(type="radio", name="requestCommunications" value="mobile" checked)
+                .modal-request__communications-item.reqCom.communications-item
+                  include ../../static/images/svg/Telegram.svg
+                  input#questionsCallbackTelegram(type="radio", name="requestCommunications" value="telegram")
+                .modal-request__communications-item.reqCom.communications-item
+                  include ../../static/images/svg/Viber.svg
+                  input#questionsRequestViber(type="radio", name="requestCommunications" value="viber")
+            .modal-request__input
+              .input
+                input.input__input#questionsPhone(type="text", inputmode="tel", placeholder="Введите ваш телефон")
+                .input__icon
+                  include ../../static/images/svg/Phone-form.svg
+                .input__error-msg
+                  span *это поле обязательно к заполнению
+            .modal-request__input
+              .input
+                input.input__input#questionsName(type="text", placeholder="Введите ваше имя")
+                .input__icon
+                  include ../../static/images/svg/Man.svg
+                .input__error-msg
+                  span *это поле обязательно к заполнению
+            .questions__textarea
+              .textarea
+                textarea.textarea__textarea#questionsText(name="questionsText", placeholder="Напишите ваш вопрос")
+            .modal-request__btn
+              .btn
+                button.btn__btn(type="button") Задать вопрос
+                .btn__3d
+            .modal-request__checkbox
+              .input-checkbox
+                .input-checkbox__check-wr
+                  input#freeAllow(type="checkbox", name="callbackAllow", checked)
+                  include ../../static/images/svg/check-mark-form.svg
+                label.input-checkbox__label(for="freeAllow") Я согласен с <a href="/">условиями</a> обработки персональных данных.
