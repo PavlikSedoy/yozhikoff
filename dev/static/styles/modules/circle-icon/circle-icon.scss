@@ -26,13 +26,24 @@
     border-radius: 50%;
     z-index: z('btn');
     position: relative;
-    box-shadow: 0px 10px 30px 0px rgba(251, 180, 44, .8);
+    box-shadow: 0px 10px 30px 0px rgba(251, 180, 44, .6);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .3s ease;
 
     svg {
       height: 15px;
+
+      path {
+        fill: $dark;
+      }
+    }
+  }
+
+  &:hover {
+    .circle-icon__bg {
+      box-shadow: 0px 10px 30px 0px rgba(251, 180, 44, 1);
     }
   }
 }

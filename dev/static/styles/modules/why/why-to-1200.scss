@@ -1,0 +1,50 @@
+.why {
+  &__image-bg {
+    width: 360px;
+    height: 360px;
+
+    &:before {
+      width: 500px;
+      height: 500px;
+    }
+
+    &:after {
+      width: 650px;
+      height: 650px;
+    }
+  }
+
+  &__image {
+    height: 460px;
+  }
+
+  &__item {
+    &.result-i {
+      top: -70px;
+      left: -240px;
+    }
+
+    &.kosmos {
+      left: -400px;
+    }
+
+    &.sovest {
+      top: 320px;
+      left: -360px;
+    }
+
+    &.price {
+      top: -65px;
+      right: -220px;
+    }
+
+    &.mother {
+      right: -410px;
+    }
+
+    &.kungh-fu {
+      top: 340px;
+      right: -350px;
+    }
+  }
+}

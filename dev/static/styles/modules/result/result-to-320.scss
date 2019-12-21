@@ -1,0 +1,21 @@
+.result {
+  &__ba-img-wr {
+    width: 300px;
+    height: 300px;
+  }
+
+  &__ba-wr {
+    width: 380px;
+    height: 380px;
+  }
+
+  &__side {
+    &:last-child {
+      top: 320px;
+    }
+  }
+
+  &__list-title {
+    margin-top: 410px;
+  }
+}

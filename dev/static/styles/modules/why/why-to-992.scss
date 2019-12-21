@@ -1,0 +1,47 @@
+.why {
+  &__item {
+    margin-top: 15px;
+
+    &.result-i, &.kosmos, &.sovest, &.price, &.mother, &.kungh-fu {
+      top: 0;
+      left: 0;
+      position: relative;
+    }
+
+    &.result-i, &.kosmos, &.sovest {
+      &>div {
+        &:first-child {
+          order: 2;
+        }
+
+        &:last-child {
+          order: 1;
+        }
+      }
+
+      .text-right {
+        text-align: left;
+        margin-right: 0;
+        margin-left: 18px;
+      }
+    }
+  }
+
+  &__image-bg {
+    padding-top: 360px;
+  }
+
+  &__btn-row {
+    margin-top: 900px;
+  }
+
+  &__item-desc {
+    br {
+      display: none;
+    }
+  }
+
+  .price {
+    padding-bottom: 0;
+  }
+}

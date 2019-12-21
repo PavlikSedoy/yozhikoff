@@ -1,0 +1,99 @@
+.hamburger {
+  &__title {
+    display: none;
+  }
+}
+
+.header {
+  height: auto;
+
+  &__contact-content {
+    position: absolute;
+    width: 150px;
+    right: 0;
+    background: $white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgba(0,0,0,.1);
+    top: 55px;
+    display: none;
+  }
+
+  &__contact-item {
+    &:last-child {
+      position: relative;
+    }
+  }
+
+  &__call-request {
+    display: none;
+  }
+
+  &__phone-link {
+    font-size: 13px;
+  }
+
+  &__contact-img-wr {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    border-radius: 50%;
+    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  &__bottom-row {
+    margin-top: 40px;
+    flex-wrap: wrap;
+
+    &>div {
+      flex-basis: 100% !important;
+
+      &:first-child {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__btn-wr {
+    width: 290px;
+    height: 80px;
+    margin-top: 550px;
+  }
+
+  &__top-row {
+    padding-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  &__hamburger {
+    top: 65px;
+  }
+
+  &__right-side:before {
+    height: 610px;
+    bottom: -50px;
+  }
+
+  &__play-btn {
+    bottom: 110px;
+    left: 5px;
+  }
+}
+
+.play-btn {
+  width: 170px;
+  height: 170px;
+
+  &:before {
+    width: 90px;
+    height: 90px;
+  }
+
+  &:after {
+    width: 170px;
+    height: 170px;
+  }
+}

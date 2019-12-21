@@ -28,4 +28,52 @@
   @import "container/media/container-to-1200.scss";
   @import "header/header-to-1200.scss";
   @import "footer/footer-to-1200.scss";
+  @import "why/why-to-1200.scss";
+  @import "free/free-to-1200.scss";
+}
+
+@media screen and (max-width: 1199px) {
+  @import "container/media/container-to-992.scss";
+  @import "header/header-to-992.scss";
+  @import "why/why-to-992.scss";
+  @import "free/free-to-992.scss";
+  @import "reviews/reviews-to-992.scss";
+}
+
+@media screen and (max-width: 991px) {
+  @import "container/media/container-to-768.scss";
+  @import "header/header-to-768.scss";
+  @import "free/free-to-768.scss";
+  @import "result/result-to-768.scss";
+  @import "price/price-to-768.scss";
+  @import "reviews/reviews-to-768.scss";
+  @import "faq/faq-to-768.scss";
+  @import "questions/questions-to-768.scss";
+  @import "footer/footer-to-768.scss";
+}
+
+@media screen and (max-width: 768px) {
+  .section-heading h1, .section-heading h2 {
+    font-size: 36px;
+    line-height: 54px;
+  }
+
+  .section-heading {
+    &__desc {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @import "header/header-to-320.scss";
+  @import "why/why-to-320.scss";
+  @import "free/free-to-320.scss";
+  @import "result/result-to-320.scss";
+  @import "price/price-to-320.scss";
+  @import "actions/actions-to-320.scss";
+  @import "reviews/reviews-to-320.scss";
+  @import "faq/faq-to-320.scss";
+  @import "questions/questions-to-320.scss";
+  @import "footer/footer-to-320.scss";
 }

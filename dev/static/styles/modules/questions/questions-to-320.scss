@@ -1,0 +1,19 @@
+.questions {
+  &__row > div:last-child {
+    margin-top: 270px;
+  }
+
+  &__bg {
+    width: 400px;
+    left: 10px;
+  }
+
+  &__textarea {
+    width: 250px;
+  }
+
+  &__form {
+    bottom: -125px;
+    left: -25px;
+  }
+}

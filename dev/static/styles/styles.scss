@@ -8,7 +8,7 @@ html {
   height: 100%;
 }
 
-body { height: 100%; color: $dark; font-family: $font; overflow-x: hidden; font-weight: 300;}
+body { height: 100%; width: 100vw; color: $dark; font-family: $font; overflow-x: hidden; font-weight: 300;}
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
@@ -122,6 +122,11 @@ button { outline: none; font-family: $font; color: $dark; }
 
 .fw600 {
   font-weight: 600;
+}
+
+.wrapper {
+  width: 100vw;
+  overflow: hidden;
 }
 
 //Модули

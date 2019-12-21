@@ -1,0 +1,9 @@
+.faq {
+  &__row {
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    flex-basis: 100%;
+  }
+}

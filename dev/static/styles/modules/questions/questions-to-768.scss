@@ -1,0 +1,28 @@
+.questions {
+  &__row {
+    flex-wrap: wrap;
+
+    &>div {
+      flex-basis: 100%;
+
+      &:last-child {
+        display: flex;
+        justify-content: center;
+        margin-top: 470px;
+      }
+    }
+  }
+
+  &__form {
+    position: relative;
+    bottom: -125px;
+  }
+
+  &__content {
+    max-width: 100%;
+  }
+
+  &__bg {
+    bottom: 427px;
+  }
+}

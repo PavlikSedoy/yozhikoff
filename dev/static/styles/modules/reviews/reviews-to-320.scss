@@ -1,0 +1,21 @@
+.reviews {
+  &__slide-content {
+    height: 570px;
+  }
+
+  &__slide-title h3 {
+    font-weight: 300;
+  }
+
+  &__slide-in {
+    padding: 30px;
+  }
+
+  &__user-info > span {
+    font-size: 15px;
+  }
+}
+
+.reviews .swiper-button-prev, .reviews .swiper-button-next {
+  bottom: 40px;
+}

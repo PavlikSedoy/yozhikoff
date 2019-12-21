@@ -1,0 +1,23 @@
+.free {
+  padding-bottom: 700px;
+
+  &__form {
+    right: 0;
+    top: 630px;
+    left: 0;
+  }
+
+  .modal-request__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__cloud-bg {
+    bottom: 790px;
+  }
+
+  &__girl-bg {
+    left: 0;
+  }
+}

@@ -1,0 +1,33 @@
+.price {
+  &__tables {
+    width: 100%;
+    overflow-x: scroll;
+    height: 485px;
+
+    tr th {
+      min-width: 180px;
+
+      &:first-child {
+        text-align: center;
+      }
+    }
+  }
+
+  &__pricing-col {
+    padding: 0 5px;
+    overflow: hidden;
+  }
+
+  &__btn {
+    width: 250px;
+  }
+
+  &__present-col {
+    padding: 30px 15px;
+    margin-top: 30px;
+    
+    img {
+      width: 200px;
+    }
+  }
+}

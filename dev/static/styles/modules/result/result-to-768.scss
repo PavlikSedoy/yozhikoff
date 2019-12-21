@@ -1,0 +1,18 @@
+.result {
+  &__side {
+    &:first-child {
+      flex-basis: 100%;
+    }
+
+    &:last-child {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 230px;
+    }
+  }
+
+  &__list-title {
+    margin-top: 550px;
+  }
+}

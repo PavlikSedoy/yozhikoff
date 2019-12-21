@@ -3503,6 +3503,7 @@ $(document).ready(function () {
         if (!$(e.target).parents().addBack().is('.modal-request__in')) {
             $(freeAdmissionModal).fadeOut();
             $(callbackModal).fadeOut();
+            // $('.header__contact-content').fadeOut();
         }
     });
     // End close modal
@@ -3514,6 +3515,12 @@ $(document).ready(function () {
         $(this).next().fadeOut();
     });
     // End hover item content
+
+    $('.price__info-row').hover( function() {
+        $(this).find('.price__hidden').fadeIn();
+    }, function() {
+        $(this).find('.price__hidden').fadeOut();
+    });
 
     // Begin result
     $(".result__ba-img-wr").twentytwenty();
@@ -3564,6 +3571,8 @@ $(document).ready(function () {
         slidesPrePage: 1,
         centeredSlides: true,
         spaceBetween: 500,
+        effect: 'fade',
+        loop: true,
         
         // Navigation arrows
         navigation: {
@@ -3574,8 +3583,26 @@ $(document).ready(function () {
     // End reviews slider
 
     $('.faq-item').click( function() {
+
+        $('.faq-item').each( function() {
+            $(this).removeClass('active');
+            $(this).children('.faq-item__content').slideUp();
+        });
+
+        $(this).addClass('active');
+
+        $(this).children('.faq-item__content').slideDown();
+    });
+
+    $('.free__item').click( function() {
         $(this).toggleClass('active');
 
-        $(this).children('.faq-item__content').slideToggle();
+        $(this).find('.free__item-text').slideToggle();
+    });
+
+    $('.header__contact-img-wr').click( function(e){
+        e.stopPropagation();
+
+        $('.header__contact-content').fadeToggle();
     });
 });

@@ -13,13 +13,13 @@
 
   // Begin roses bg
   &__roses-bg {
-    height: 450px;
+    height: 100%;
     width: 100%;
     bottom: 0;
     left: 0;
     position: absolute;
     z-index: z('bg');
-    background: 50% 50%/cover no-repeat url('../images/why/roses.png');
+    background: 50% 100%/contain no-repeat url('../images/why/roses.png');
   }
   // End roses bg
 
@@ -113,6 +113,7 @@
     font-size: 18px;
     color: $dark;
     line-height: 45px;
+    font-weight: 500;
   }
 
   &__item-img {

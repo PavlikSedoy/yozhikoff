@@ -131,6 +131,7 @@
     font-size: 18px;
     font-weight: 600;
     border-radius: 10px 10px 0 0;
+    font-weight: 500;
 
     &:before {
       @include pseudo;
@@ -181,5 +182,6 @@
     position: absolute;
     right: -40px;
     top: -60px;
+    z-index: z('content');
   }
 }

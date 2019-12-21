@@ -1,0 +1,27 @@
+.free {
+  &__girl-bg {
+    left: -20%;
+    width: 130%;
+  }
+
+  &__item {
+    &.first {
+      left: 70px;
+      bottom: 310px;
+    }
+
+    &.second {
+      left: 310px;
+      bottom: 350px;
+    }
+
+    &.third {
+      bottom: 190px;
+      left: 430px;
+    }
+
+    &.fouth {
+      left: 570px;
+    }
+  }
+}

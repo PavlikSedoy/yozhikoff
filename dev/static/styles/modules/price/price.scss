@@ -6,6 +6,7 @@
     display: flex;
     box-shadow: 0px 0px 60px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    background: $white;
   }
 
   &__container {
@@ -141,13 +142,20 @@
   }
 
   &__info-row {
-    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     display: flex;
     align-items: center;
     margin-left: 30px;
+    position: relative;
+    width: 210px;
 
     &:hover {
       cursor: pointer;
+
+      .price__info-icon {
+        background-color: $coralPink;
+      }
     }
   }
 
@@ -155,10 +163,11 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: $coralPink;
+    background-color: #303030;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .3s ease;
 
     svg {
       height: 12px;
@@ -203,5 +212,39 @@
     width: 100%;
     height: 100%;
     background: 50% 50%/contain no-repeat url('../images/benefits/leaves.png');
+  }
+
+  &__hidden {
+    width: 360px;
+    position: absolute;
+    bottom: 99%;
+    background-color: rgba(250, 250, 250, 1);
+    z-index: z('up-content');
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px 30px;
+    display: none;
+
+    table {
+      width: 100%;
+
+      tr {
+        td {
+          // height: 15px;
+          padding-top: 10px;
+          // padding-bottom: 5px;
+
+          &:last-child {
+            text-align: center;
+            font-weight: 500;
+          }
+
+          &.buttom-line {
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba($dark, .3);
+          }
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,29 @@
+.reviews {
+  &__slide-img {
+    display: none;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    bottom: -70px;
+  }
+
+  .swiper-button-next {
+    right: auto;
+    left: 50%;
+    transform: translateX(calc(-50% + 40px));
+  }
+
+  .swiper-button-prev {
+    right: auto;
+    left: 50%;
+    transform: translateX(calc(-50% - 40px));
+  }
+
+  &__slide-in {
+    padding: 50px;
+  }
+
+  .section-heading {
+    padding-left: 0;
+  }
+}

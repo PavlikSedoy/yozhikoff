@@ -1,4 +1,6 @@
 .actions {
+  padding-top: 100px;
+
   &__swiper-container {
     position: relative;
   }
@@ -135,6 +137,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       position: absolute;
+      font-weight: 700;
     }
   }
 

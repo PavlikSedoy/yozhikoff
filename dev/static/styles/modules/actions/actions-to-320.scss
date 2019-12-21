@@ -1,0 +1,21 @@
+.actions {
+  .swiper-button-prev, .swiper-button-next {
+    top: 420px;
+  }
+
+  .swiper-button-next {
+    left: 50%;
+    right: auto;
+    transform: translateX(calc(-50% + 40px));
+  }
+
+  .swiper-button-prev {
+    left: 50%;
+    right: auto;
+    transform: translateX(calc(-50% - 40px));
+  }
+
+  // .swiper-slide {
+  //   max-width: 100% !important;
+  // }
+}

@@ -1,0 +1,23 @@
+.header {
+  &__advantages {
+    display: none;
+  }
+
+  &__container {
+    justify-content: flex-start;
+  }
+
+  &__bottom-row {
+    margin-top: 50px;
+  }
+
+  &__play-btn {
+    bottom: 70px;
+    left: 15px;
+  }
+
+  &__right-side:before {
+    bottom: -160px;
+    width: 130%;
+  }
+}

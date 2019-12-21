@@ -58,6 +58,7 @@
     width: 340px;
     height: 720px;
     background: 50% 50%/contain no-repeat url('../images/reviews/phone.png');
+    z-index: z('up-content');
   }
 
   &__slide-title {

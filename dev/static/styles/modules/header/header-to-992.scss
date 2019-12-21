@@ -1,0 +1,28 @@
+.header {
+  height: 900px;
+
+  &__contacts {
+    &>div {
+      &:first-child {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  &__top-row {
+    width: 60%;
+    align-self: flex-end;
+  }
+
+  &__hamburger {
+    left: 15px;
+  }
+
+  .social {
+    display: none;
+  }
+}

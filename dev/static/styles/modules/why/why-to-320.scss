@@ -1,0 +1,36 @@
+.why {
+  &__image-bg {
+    width: 315px;
+    height: 315px;
+    padding-top: 300px;
+
+    &:before {
+      width: 400px;
+      height: 400px;
+    }
+
+    &:after {
+      width: 540px;
+      height: 540px;
+    }
+  }
+
+  &__image {
+    height: 350px;
+  }
+
+  &__item {
+    padding: 0 15px;
+  }
+
+  &__btn-row {
+    margin-top: 1080px;
+  }
+
+  &__item-content {
+    margin-right: 10px;
+    &.text-left {
+      margin-left: 10px;
+    }
+  }
+}

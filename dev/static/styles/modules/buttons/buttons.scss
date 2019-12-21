@@ -66,9 +66,26 @@
 
 // Begin close buttons
 .close {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s ease;
+  border-radius: 50%;
+  
+
+  &:hover {
+    background-image: linear-gradient(#ffd990 0%, #fcbf12 100%);
+    box-shadow: 0px 5px 30px 0px rgba(251, 180, 44, 0.6);
+  }
+
   button {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     background: transparent;
     border: none;

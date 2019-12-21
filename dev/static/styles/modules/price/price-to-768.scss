@@ -1,0 +1,13 @@
+.price {
+  &__content {
+    flex-wrap: wrap;
+  }
+
+  &__pricing-col {
+    flex-basis: 100%;
+  }
+
+  &__present-col {
+    flex-basis: 100%;
+  }
+}
