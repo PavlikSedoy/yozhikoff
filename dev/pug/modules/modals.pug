@@ -28,14 +28,14 @@
         span Подписывайтесь на наши соц. сети
         .row.social__row
           .social__item
-            a.social__link(href="/")
+            a.social__link(href="https://www.instagram.com/yozhikoff_club/")
               include ../../static/images/svg/Instagram.svg
           .social__item
-            a.social__link(href="/")
+            a.social__link(href="https://www.facebook.com/Yozhikoff/")
               include ../../static/images/svg/Facebook.svg
     .modal-nav__btn-wr
       .btn.btn__fz_14
-        button.btn__btn(type="button") позвоните мне
+        button.btn__btn#navRequest(type="button") позвоните мне
         .btn__3d
   //- End modal nav container
 //- End navigation
@@ -143,3 +143,143 @@
               include ../../static/images/svg/check-mark-form.svg
             label.input-checkbox__label(for="callbackAllow") Я согласен с <a href="/">условиями</a> обработки персональных данных.
 //- End callback
+
+.modal-double#presentModal
+  .modal-double__in
+    .modal-double__content-side.present
+      .modal-double__present-bg-1
+      .modal-double__header-bg-1
+      .modal-double__header-bg-2
+      .modal-double__header-bg-3
+      .modal-double__present-text
+        .modal-double__present-text-desc твой подарочек<br>на первое посещение
+    .modal-double__form-side
+      .modal-request__in-border
+      .modal-request__close
+        .close.close__type_3d.close__color_gray
+          .close__bg
+          .close__3d
+          button.modal-request__close(type="button")
+      .modal-request__heading
+        h3.modal-request__title Оставьте заявку
+        .modal-request__desc
+          p на участвие в акции
+      form.modal-request__form(action="/")
+        .modal-request__communications
+          p.modal-reuest__communications-title Выберите удобный способ для<br>связи специалиста с Вами:
+          .modal-request__communications-row
+            .modal-request__communications-item.communications-item.reqCom.active
+              include ../../static/images/svg/Mobile.svg
+              input#modalPresentMobile(type="radio", name="requestCommunications" value="mobile" checked)
+            .modal-request__communications-item.reqCom.communications-item
+              include ../../static/images/svg/Telegram.svg
+              input#modalPresentTelegram(type="radio", name="requestCommunications" value="telegram")
+            .modal-request__communications-item.reqCom.communications-item
+              include ../../static/images/svg/Viber.svg
+              input#modalPresentViber(type="radio", name="requestCommunications" value="viber")
+          .modal-request__input
+            .input
+              input.input__input#PresentPhone(type="text", inputmode="tel", placeholder="Введите ваш телефон")
+              .input__icon
+                include ../../static/images/svg/Phone-form.svg
+              .input__error-msg
+                span *это поле обязательно к заполнению
+          .modal-request__input
+            .input
+              input.input__input#PresentName(type="text", placeholder="Введите ваше имя")
+              .input__icon
+                include ../../static/images/svg/Man.svg
+              .input__error-msg
+                span *это поле обязательно к заполнению
+          .modal-request__btn
+            .btn
+              button.btn__btn(type="button") Участвовать в акции
+              .btn__3d
+          .modal-request__checkbox
+            .input-checkbox
+              .input-checkbox__check-wr
+                input#PresentAllow(type="checkbox", name="PresentAllow", checked)
+                include ../../static/images/svg/check-mark-form.svg
+              label.input-checkbox__label(for="PresentAllow") Я согласен с <a href="/">условиями</a> обработки персональных данных.
+
+.modal-double#actionModal
+  .modal-double__in
+    .modal-double__content-side.action
+      .modal-double__action-img
+        img#actionImage(src="", alt="Action")
+      .modal-double__action-content#actionContent
+        h3.modal-double__action-title#actionTitle
+        #actionText
+        //- p Оплати один сеанс лазерной эпиляции любых зон, приходи вместе с подругой и сделай процедуру вдвоем на одинаковые зоны без каких-либо доплат. 
+
+        //- p А кто, кому и что должен разберетесь между собой потом… по-дружески)
+    .modal-double__form-side
+      .modal-request__in-border
+      .modal-request__close
+        .close.close__type_3d.close__color_gray
+          .close__bg
+          .close__3d
+          button.modal-request__close(type="button")
+      .modal-request__heading
+        h3.modal-request__title Оставьте заявку
+        .modal-request__desc
+          p на участвие в акции
+      form.modal-request__form(action="/")
+        .modal-request__communications
+          p.modal-reuest__communications-title Выберите удобный способ для<br>связи специалиста с Вами:
+          .modal-request__communications-row
+            .modal-request__communications-item.communications-item.reqCom.active
+              include ../../static/images/svg/Mobile.svg
+              input#modalactionMobile(type="radio", name="requestCommunications" value="mobile" checked)
+            .modal-request__communications-item.reqCom.communications-item
+              include ../../static/images/svg/Telegram.svg
+              input#modalactionTelegram(type="radio", name="requestCommunications" value="telegram")
+            .modal-request__communications-item.reqCom.communications-item
+              include ../../static/images/svg/Viber.svg
+              input#modalactionViber(type="radio", name="requestCommunications" value="viber")
+          .modal-request__input
+            .input
+              input.input__input#actionPhone(type="text", inputmode="tel", placeholder="Введите ваш телефон")
+              .input__icon
+                include ../../static/images/svg/Phone-form.svg
+              .input__error-msg
+                span *это поле обязательно к заполнению
+          .modal-request__input
+            .input
+              input.input__input#actionName(type="text", placeholder="Введите ваше имя")
+              .input__icon
+                include ../../static/images/svg/Man.svg
+              .input__error-msg
+                span *это поле обязательно к заполнению
+          .modal-request__btn
+            .btn
+              button.btn__btn(type="button") Участвовать в акции
+              .btn__3d
+          .modal-request__checkbox
+            .input-checkbox
+              .input-checkbox__check-wr
+                input#actionAllow(type="checkbox", name="actionAllow", checked)
+                include ../../static/images/svg/check-mark-form.svg
+              label.input-checkbox__label(for="actionAllow") Я согласен с <a href="/">условиями</a> обработки персональных данных.
+
+.modal-request.policy#policy
+  .modal-request__in
+    .modal-request__in-border
+    .modal-request__close
+      .close.close__type_3d.close__color_gray
+        .close__bg
+        .close__3d
+        button.modal-request__close(type="button")
+    .policy__heading
+      h2 <span class="yellow">Соглашение</span> об обработке персональных данных
+    .policy__content
+      p Данное соглашение об обработке персональных данных разработано в соответствии с законодательством Украины
+
+      p Все лица, заполнившие сведения, составляющие персональные данные на данном сайте, а также разместившие иную информацию обозначенными действиями, подтверждают свое согласие на обработку персональных данных и их передачу оператору обработки персональных данных.
+
+      p Под персональными данными Гражданина понимается нижеуказанная информация: Общая информация (Имя, телефон и адрес электронной почты); посетители сайта направляют свои персональные данные для получения подробной информации о франшизе.
+
+      p Гражданин, принимая настоящее Соглашение, выражает свою заинтересованность и полное согласие, что обработка его персональных данных может включать в себя следующие действия: сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение), использование, уничтожение.
+
+      p Гражданин гарантирует: информация, им предоставленная, является полной, точной и достоверной; при предоставлении информации не нарушается действующее законодательство Украины, законные права и интересы третьих лиц; вся предоставленная информация заполнена Гражданина в отношении себя лично.
+    

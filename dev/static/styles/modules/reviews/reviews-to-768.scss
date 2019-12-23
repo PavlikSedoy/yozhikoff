@@ -10,13 +10,13 @@
   .swiper-button-next {
     right: auto;
     left: 50%;
-    transform: translateX(calc(-50% + 40px));
+    transform: translateX(calc(-50% ));
   }
 
   .swiper-button-prev {
     right: auto;
     left: 50%;
-    transform: translateX(calc(-50% - 40px));
+    transform: translateX(calc(-50%));
   }
 
   &__slide-in {
@@ -25,5 +25,26 @@
 
   .section-heading {
     padding-left: 0;
+  }
+
+  .swiper-pagination {
+    right: 20px;
+  }
+
+  &__bt-n {
+    right: 60px;
+  }
+
+  &__bt-p {
+    right: 120px;
+  }
+
+  &__slider {
+    &:before {
+      left: -10px;
+      top: 150px;
+      width: 70px;
+      height: 110px;
+    }
   }
 }

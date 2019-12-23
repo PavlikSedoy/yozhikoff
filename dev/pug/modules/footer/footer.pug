@@ -11,10 +11,10 @@ footer.footer
             span Подписывайтесь на наши соц. сети
             .row.social__row
               .social__item
-                a.social__link(href="/")
+                a.social__link(href="https://www.instagram.com/yozhikoff_club/")
                   include ../../../static/images/svg/Instagram.svg
               .social__item
-                a.social__link(href="/")
+                a.social__link(href="https://www.facebook.com/Yozhikoff/")
                   include ../../../static/images/svg/Facebook.svg
       .footer__contacts
         .footer__call
@@ -24,13 +24,15 @@ footer.footer
             .footer__call-row
               a.header__phone-link(href="tel://+380996277446") +38 (099) 627 74 46
             .footer__call-row
-              span Телефон
-              span Viber
-              span Telegram
+              a(href="tel://+380996277446") Телефон
+              a(href="https://mssg.me/r/m/5dcb25c636f8f6001380c6c0") Viber
+              a(href="https://mssg.me/r/m/5dcb25662f642c00844981ac") Telegram
         .footer__btn-wr
           .btn.footer__btn
             button.btn__btn#freeAdmissionBtn(type="button") позвоните мне
             .btn__3d
     .footer__row
-      a.footer__privacy-police(href='/') Политика конфиденциальности
+      a.footer__privacy-police#policyBtn(href='/') Политика конфиденциальности
+      span Упаковка и разработка: 
+        a.footer__privacy-police(href="https://www.instagram.com/bebrand_agency/") Bebrand
       span Все права защищены (с) 2019-2020

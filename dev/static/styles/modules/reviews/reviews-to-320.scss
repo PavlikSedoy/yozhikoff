@@ -1,6 +1,6 @@
 .reviews {
   &__slide-content {
-    height: 570px;
+    height: 470px;
   }
 
   &__slide-title h3 {
@@ -13,6 +13,38 @@
 
   &__user-info > span {
     font-size: 15px;
+  }
+
+  &__slider {
+    &:before {
+      left: auto;
+      top: 120px;
+      right: 0px;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &__bt-n, &__bt-p {
+    bottom: 30px;
+  }
+
+  &__bt-p {
+    left: 50%;
+    right: auto;
+    transform: translateX(calc(-50% - 30px));
+  }
+
+  &__bt-n {
+    left: 50%;
+    right: auto;
+    transform: translateX(calc(-50% + 30px));
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    outline: none;
   }
 }
 

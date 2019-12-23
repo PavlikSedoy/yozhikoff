@@ -1,4 +1,4 @@
-section.reviews
+section.reviews#reviews
   .reviews__top-bg-gradient
   .reviews__bottom-bg
 
@@ -9,6 +9,7 @@ section.reviews
 
     .reviews__slider
       .reviews__swiper-container
+        .swiper-pagination
         .swiper-wrapper
             .swiper-slide
               .reviews__slide-content
@@ -61,5 +62,7 @@ section.reviews
                       a.reviews__user-insta(href="/")
                         include ../../static/images/svg/Instagram.svg
                         span Инстаграм
-        .reviews__swiper-button-next.swiper-button-next
-        .reviews__swiper-button-prev.swiper-button-prev
+        .reviews__bt-n
+          .reviews__swiper-button-next.swiper-button-next
+        .reviews__bt-p
+          .reviews__swiper-button-prev.swiper-button-prev

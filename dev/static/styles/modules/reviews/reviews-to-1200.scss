@@ -1,0 +1,27 @@
+.reviews {
+  .swiper-pagination {
+    right: 50px;
+  }
+
+  &__bt-n {
+    right: 100px;
+  }
+
+  &__bt-p {
+    right: 160px;
+  }
+
+  &__swiper-container:after {
+    left: -190px;
+  }
+
+  &__slider:before {
+    left: 130px;
+    top: 90px;
+  }
+
+  &__slider:after {
+    right: 20px;
+    top: -30px;
+  }
+}

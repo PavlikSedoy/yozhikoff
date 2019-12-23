@@ -3309,7 +3309,7 @@
         }
         var beforeImg = container.find("img:first");
         var afterImg = container.find("img:last");
-        container.append("<div class='twentytwenty-handle'></div>");
+        container.append("<div class='twentytwenty-handle'><div class='handle-in'></div></div>");
         var slider = container.find(".twentytwenty-handle");
         slider.append("<span class='twentytwenty-" + beforeDirection + "-arrow'></span>");
         slider.append("<span class='twentytwenty-" + afterDirection + "-arrow'></span>");
@@ -3456,7 +3456,8 @@ $(document).ready(function () {
 
     // Begin admission form
     var admissionPhone = $('#freeAdmissionPhone');
-    $(admissionPhone).inputmask({"mask": "+38 (999) 999-99-99"});
+    $(admissionPhone).inputmask({"mask": "+38 (999) 999-99-99",showMaskOnHover: false,
+    showMaskOnFocus: true});
     // End admission form
 
     // Begin free admission form
@@ -3471,6 +3472,12 @@ $(document).ready(function () {
         });
     // End free admission form
 
+    $('#getPresentBtn').click( function(e) {
+        e.stopPropagation();
+
+        $('#presentModal').fadeIn();
+    });
+
     // Begin callback form
     var callbackBtn = $('#callbackBtn'),
         whyRequest = $('#whyRequest'),
@@ -3478,24 +3485,36 @@ $(document).ready(function () {
         freePhone = $('#freePhone'),
         resultRequestBtn = $('#resultRequest');
 
-    $(freePhone).inputmask({"mask": "+38 (999) 999-99-99"});
+    $(freePhone).add('#PresentPhone').add('#actionPhone').add('#callbackPhone').add('#questionsPhone').inputmask({"mask": "+38 (999) 999-99-99",showMaskOnHover: false,
+    showMaskOnFocus: true});
 
-    $(callbackBtn).add(whyRequest).add(resultRequestBtn).click( function(e) {
+    $(callbackBtn).add(whyRequest).add(resultRequestBtn).add('#navRequest').click( function(e) {
         e.stopPropagation();
 
         $(callbackModal).fadeIn();
+    });
+
+    $('#policyBtn').click( function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+
+        $('#policy').fadeIn();
     });
     // End callback form
 
     // Begin close modal
     $(closeModal).click( function() {
         $('.modal-request').fadeOut();
+        $('#presentModal').fadeOut();
+        $('#actionModal').fadeOut();
     });
 
     $(document).keyup(function(e) {
         if (e.key === "Escape") {
             $(freeAdmissionModal).fadeOut();
             $(callbackModal).fadeOut();
+            $('#presentModal').fadeOut();
+            $('#actionModal').fadeOut();
         }
     });
 
@@ -3504,6 +3523,11 @@ $(document).ready(function () {
             $(freeAdmissionModal).fadeOut();
             $(callbackModal).fadeOut();
             // $('.header__contact-content').fadeOut();
+        }
+
+        if (!$(e.target).parents().addBack().is('.modal-double__in')) {
+            $('#presentModal').fadeOut();
+            $('#actionModal').fadeOut();
         }
     });
     // End close modal
@@ -3552,16 +3576,28 @@ $(document).ready(function () {
     // End pricing
 
     // Begin actions slider
-    var actionsSlider = new Swiper ('.actions__swiper-container', {
+    var actionsSlider = new Swiper ('#actionSwiperContainer', {
         // Optional parameters
-        width: 500,
+        slidesPrePage: 1,
         spaceBetween: 30,
+        loop: true,
+        // loopAdditionalSlides: 5,
+        loopedSlides: 5,
         
         // Navigation arrows
         navigation: {
           nextEl: '.actions__swiper-button-next',
           prevEl: '.actions__swiper-button-prev',
         },
+
+        breakpoints: {
+            768: {
+                width: 400,
+            },
+            1200: {
+                width: 500,
+            }
+        }
       })
     // End actions slider
 
@@ -3573,11 +3609,17 @@ $(document).ready(function () {
         spaceBetween: 500,
         effect: 'fade',
         loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
         
         // Navigation arrows
         navigation: {
           nextEl: '.reviews__swiper-button-next',
           prevEl: '.reviews__swiper-button-prev',
+        },
+        autoplay: {
+            delay: 5000,
         },
       })
     // End reviews slider
@@ -3595,14 +3637,56 @@ $(document).ready(function () {
     });
 
     $('.free__item').click( function() {
+        $('.free__item').each( function() {
+            $(this).removeClass('active');
+            $(this).find('.free__item-text').slideUp();
+        });
+
         $(this).toggleClass('active');
 
         $(this).find('.free__item-text').slideToggle();
     });
 
+    if ( $(document).width() < 992 ) {
+        $('.free__item.third').addClass('active');
+        $('.free__item.third').find('.free__item-text').slideToggle();
+    }
+
     $('.header__contact-img-wr').click( function(e){
         e.stopPropagation();
 
         $('.header__contact-content').fadeToggle();
+    });
+
+    // Begin smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    // End smooth scroll
+
+    $('.actions__slide').click( function(e) {
+        e.stopPropagation();
+
+        var actionImage = $(this).find('.actions__slide-img').attr('src'),
+            actionTitle = $(this).find('.actions__slide-popup h3').text(),
+            actionText = $(this).find('.actions__popup-content').html()
+
+        $('#actionImage').attr('src', actionImage);
+        $('#actionTitle').text(actionTitle);
+        $('#actionText').html(actionText);
+
+        $('#actionModal').fadeIn();
+    });
+
+    $(window).scroll( function(event) {
+        var targetOffset = $(window).scrollTop();
+
+        targetOffset > 100 ? $('.scroll').fadeOut() : $('.scroll').fadeIn();
     });
 });

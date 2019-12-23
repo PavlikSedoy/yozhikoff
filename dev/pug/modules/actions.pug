@@ -1,82 +1,76 @@
-section.actions
+section.actions#actions
   .actions__bg
 
   .container
     .section-heading
       .section-heading__naming действующие акции
       h2 Смотрите наши<br>действующие <span class="yellow">акции</span>
-    .actions__slider
-      .actions__swiper-container
-        .swiper-wrapper
-            .swiper-slide.actions__slide
-              .actions__slide-content
-                .actions__slide-img-wr
-                  img.actions__slide-img(src="./static/images/actions/girls.jpg", alt="")
-                  .actions__slide-date до 25.10.2019
-                  .actions__slide-more
-                    .actions__slide-more-text Подробнее
-                    .actions__slide-more-icon
-                      include ../../static/images/svg/loupe.svg
-                .actions__slide-desc
-                  h3 В чем подвох?
-                  p Оплати один сеанс лазерной эпиляции любых зон, приходи вместе с подругой и сделай процедуру вдвоем на...
-              .actions__slide-popup
-                | popup
-            .swiper-slide.actions__slide
-              .actions__slide-content
-                .actions__slide-img-wr
-                  img.actions__slide-img(src="./static/images/actions/armenian-girl.jpg", alt="")
-                  .actions__slide-date до 10.10.2019
-                  .actions__slide-more
-                    .actions__slide-more-text Подробнее
-                    .actions__slide-more-icon
-                      include ../../static/images/svg/loupe.svg
-                .actions__slide-desc
-                  h3 Free zone
-                  p Оплати прямо сейчас всего 2 процедуры лазерной эпиляции и приходи на третью процедуру этой зоны «на халяву»...
-              .actions__slide-popup
-                | popup
-            .swiper-slide.actions__slide
-              .actions__slide-content
-                .actions__slide-img-wr
-                  img.actions__slide-img(src="./static/images/actions/legs.jpg", alt="")
-                  .actions__slide-date до 25.06.2019
-                  .actions__slide-more
-                    .actions__slide-more-text Подробнее
-                    .actions__slide-more-icon
-                      include ../../static/images/svg/loupe.svg
-                .actions__slide-desc
-                  h3 All right (Все справа)
-                  p Сделай эпиляцию любой зоны правой половины тела абсолютно бесплатно. Без каких-то доплат и обязательств...
-              .actions__slide-popup
-                | popup
-            .swiper-slide.actions__slide
-              .actions__slide-content
-                .actions__slide-img-wr
-                  img.actions__slide-img(src="./static/images/actions/girls.jpg", alt="")
-                  .actions__slide-date до 25.10.2019
-                  .actions__slide-more
-                    .actions__slide-more-text Подробнее
-                    .actions__slide-more-icon
-                      include ../../static/images/svg/loupe.svg
-                .actions__slide-desc
-                  h3 В чем подвох?
-                  p Оплати один сеанс лазерной эпиляции любых зон, приходи вместе с подругой и сделай процедуру вдвоем на...
-              .actions__slide-popup
-                | popup
-            .swiper-slide.actions__slide
-              .actions__slide-content
-                .actions__slide-img-wr
-                  img.actions__slide-img(src="./static/images/actions/girls.jpg", alt="")
-                  .actions__slide-date до 25.10.2019
-                  .actions__slide-more
-                    .actions__slide-more-text Подробнее
-                    .actions__slide-more-icon
-                      include ../../static/images/svg/loupe.svg
-                .actions__slide-desc
-                  h3 В чем подвох?
-                  p Оплати один сеанс лазерной эпиляции любых зон, приходи вместе с подругой и сделай процедуру вдвоем на...
-              .actions__slide-popup
-                | popup
+      .actions__sw-p
         .swiper-button-prev.actions__swiper-button-prev
+      .actions__sw-n
         .swiper-button-next.actions__swiper-button-next
+      .actions__swipe-right Листайте вправо
+        include ../../static/images/actions/arrow-right.svg
+  .actions__slider
+    .actions__swiper-container#actionSwiperContainer
+      .swiper-wrapper
+          .swiper-slide.actions__slide
+            .actions__slide-content
+              .actions__slide-img-wr
+                img.actions__slide-img(src="./static/images/actions/girls.jpg", alt="")
+                .actions__slide-date до 25.10.2019
+                  .actions__slide-before-date
+                  .actions__slide-date-bg
+                .actions__slide-more
+                  .actions__slide-more-text Подробнее
+                  .actions__slide-more-icon
+                    include ../../static/images/svg/loupe.svg
+              .actions__slide-desc
+                h3 В чем подвох?
+                p Оплати один сеанс лазерной эпиляции любых зон, приходи вместе с подругой и сделай процедуру вдвоем на...
+            .actions__slide-popup
+              h3 В чем подвох?
+              .actions__popup-content
+                p Оплати один сеанс лазерной эпиляции любых зон, приходи вместе с подругой и сделай процедуру вдвоем на одинаковые зоны без каких-либо доплат. 
+
+                p А кто, кому и что должен разберетесь между собой потом… по-дружески)
+          .swiper-slide.actions__slide
+            .actions__slide-content
+              .actions__slide-img-wr
+                img.actions__slide-img(src="./static/images/actions/armenian-girl.jpg", alt="")
+                .actions__slide-date.old до 10.10.2019
+                  .actions__slide-before-date
+                  .actions__slide-date-bg
+                .actions__slide-more
+                  .actions__slide-more-text Подробнее
+                  .actions__slide-more-icon
+                    include ../../static/images/svg/loupe.svg
+              .actions__slide-desc
+                h3 Free zone
+                p Оплати прямо сейчас всего 2 процедуры лазерной эпиляции и приходи на третью процедуру этой зоны «на халяву»...
+            .actions__slide-popup
+              h3 В чем подвох?2
+              .actions__popup-content
+                p Оплати один сеанс лазерной эпиляции любых зон, приходи вместе с подругой и сделай процедуру вдвоем на одинаковые зоны без каких-либо доплат. 2
+
+                p А кто, кому и что должен разберетесь между собой потом… по-дружески)2
+          .swiper-slide.actions__slide
+            .actions__slide-content
+              .actions__slide-img-wr
+                img.actions__slide-img(src="./static/images/actions/legs.jpg", alt="")
+                .actions__slide-date до 25.06.2019
+                  .actions__slide-before-date
+                  .actions__slide-date-bg
+                .actions__slide-more
+                  .actions__slide-more-text Подробнее
+                  .actions__slide-more-icon
+                    include ../../static/images/svg/loupe.svg
+              .actions__slide-desc
+                h3 All right (Все справа)
+                p Сделай эпиляцию любой зоны правой половины тела абсолютно бесплатно. Без каких-то доплат и обязательств...
+            .actions__slide-popup
+              h3 В чем подвох?3
+              .actions__popup-content
+                p Оплати один сеанс лазерной эпиляции любых зон, приходи вместе с подругой и сделай процедуру вдвоем на одинаковые зоны без каких-либо доплат.3
+
+                p А кто, кому и что должен разберетесь между собой потом… по-дружески)3

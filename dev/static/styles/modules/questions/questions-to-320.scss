@@ -4,8 +4,8 @@
   }
 
   &__bg {
-    width: 400px;
-    left: 10px;
+    width: 440px;
+    left: 40px;
   }
 
   &__textarea {
@@ -14,6 +14,27 @@
 
   &__form {
     bottom: -125px;
-    left: -25px;
+    left: 0;
+    padding: 20px 30px 40px;
+    width: 310px;
+
+    &:after {
+      width: 60px;
+      height: 133px;
+    }
+  }
+
+  &__info-hidden {
+    z-index: 3;
+  }
+
+  &__subname {
+    left: 10px;
+    bottom: 150px;
+  }
+
+  &__name {
+    left: 105px;
+    bottom: 180px;
   }
 }

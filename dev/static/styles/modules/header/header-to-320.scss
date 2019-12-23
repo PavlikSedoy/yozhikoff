@@ -19,6 +19,10 @@
     display: none;
   }
 
+  .contact-img {
+    content:url("../images/header/mobile-solid.svg");
+  }
+
   &__contact-item {
     &:last-child {
       position: relative;
@@ -42,6 +46,7 @@
     background: $white;
     border-radius: 50%;
     box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid #fff;
   }
 
   &__bottom-row {
@@ -58,6 +63,7 @@
   }
 
   &__btn-wr {
+    margin: auto;
     width: 290px;
     height: 80px;
     margin-top: 550px;
@@ -73,13 +79,14 @@
   }
 
   &__right-side:before {
-    height: 610px;
+    height: 700px;
     bottom: -50px;
   }
 
   &__play-btn {
     bottom: 110px;
-    left: 5px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -96,4 +103,8 @@
     width: 170px;
     height: 170px;
   }
+}
+
+.modal-nav {
+  padding-top: 250px;
 }

@@ -7,6 +7,10 @@
 
   &__slider {
     margin-top: 60px;
+    margin-left: calc((100% - 1130px)*.5);
+    overflow: hidden;
+    z-index: z('content');
+    width: calc((100% - 1130px)*.5 + 1130px);
   }
 
   &__slide-popup {
@@ -49,25 +53,61 @@
     display: flex;
     // justify-content: center;
     align-items: center;
-    background-image: linear-gradient(rgba(255, 217, 144, 1) 0%, rgba(252, 191, 18, 1) 100%);
-    border-radius: 0px 10px 10px 0px;
-    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+    // background-image: linear-gradient(rgba(255, 217, 144, 1) 0%, rgba(252, 191, 18, 1) 100%);
+    // border-radius: 0px 10px 10px 0px;
+    // clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
     font-size: 14px;
     padding-left: 15px;
+    z-index: z('content');
+
+    &.old {
+      .actions__slide-before-date {
+        background-image: url('../images/actions/Date-old-2.svg');
+      }
+      
+      .actions__slide-date-bg {
+        background-image: url('../images/actions/Date-old-1.svg');
+      }
+    }
+  }
+
+  &__slide-date-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: 0% 50%/100% auto no-repeat url('../images/actions/Date-new-1.svg');
+    z-index: -1;
+  }
+
+  &__slide-before-date {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: calc(100% + 20px);
+    width: 110%;
+    background: -33px -20px/124% auto no-repeat url('../images/actions/Date-new-2.svg');
+    z-index: -1;
   }
 
   &__slide {
     &:hover {
+      
       cursor: pointer;
 
       .actions__slide-more {
         width: 160px;
         transition: .3s ease;
+        opacity: 1;
       }
 
       .actions__slide-more-text {
         opacity: 1;
-        transition: .3s ease .3s;
+        transition: opacity .3s ease .3s, opacity .3s ease width, color .6s ease .9s;
+        width: 100%;
+        color: $dark;
+        // box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
       }
     }
   }
@@ -82,11 +122,14 @@
     width: 48px;
     height: 48px;
     transition: .3s ease .3s;
+    opacity: .5;
+    overflow: hidden;
+    // box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   }
 
   &__slide-more-text {
     position: absolute;
-    width: 100%;
+    width: 0;
     height: 100%;
     background-color: rgba(250, 250, 250, 1);
     border-radius: 24px;
@@ -98,6 +141,7 @@
     justify-content: flex-end;
     opacity: 0;
     transition: .3s ease;
+    color: transparent;
   }
 
   &__slide-more-icon {
@@ -123,12 +167,65 @@
     }
   }
 
-  .swiper-button-prev, .swiper-button-next {
-    top: -100px;
+  .actions__sw-p, .actions__sw-n {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    top: auto;
+    bottom: 0;
     width: 40px;
     height: 40px;
-    background-image: linear-gradient(rgba(255, 217, 144, 1) 0%, rgba(252, 191, 18, 1) 100%);
     border-radius: 50%;
+    position: absolute;
+
+    &:before {
+      @include pseudo;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #ecae00;
+      border-radius: 50%;
+    }
+  }
+
+  .actions__sw-n {
+    right: 0;
+  }
+
+  .actions__sw-p {
+    right: 60px;
+    left: auto;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    background-image: linear-gradient(rgba(255, 217, 144, 1) 0%, rgba(252, 191, 18, 1) 100%);
+    z-index: 3;
+    transition: .3s ease;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    height: 100%;
+    right: auto;
+    text-align: auto;
+    transform: translate(0, 0);
+    border-radius: 50%;
+    outline: none;
+
+    &:before {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 2px;
+      background-color: #ecae00;
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
     &:after {
       font-size: 16px;
@@ -138,16 +235,18 @@
       transform: translate(-50%, -50%);
       position: absolute;
       font-weight: 700;
+      // transition: .3s ease;
     }
-  }
 
-  .swiper-button-next {
-    right: 0;
-  }
+    &:hover {
+      box-shadow: 0px 10px 30px 0px rgba(251, 180, 44, 0.4);
+      width: 44px;
+      height: 44px;
 
-  .swiper-button-prev {
-    right: 60px;
-    left: auto;
+      &:after {
+        font-size: 18px;
+      }
+    }
   }
 
   &__bg {
@@ -158,5 +257,9 @@
     width: 100%;
     height: 100%;
     background: 50% 50%/contain no-repeat url('../images/actions/leaves-bg.png');
+  }
+
+  &__swipe-right {
+    display: none;
   }
 }

@@ -12,6 +12,10 @@
   max-width: 466px;
   overflow-y: scroll;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   &.active {
     transform: translateX(0);
   }
@@ -59,6 +63,21 @@
     margin-top: 40px;
     margin-bottom: 50px;
   }
+
+  .close button:before, .close button:after {
+    background: $dark;
+  }
+
+  .close {
+    &:hover {
+      background-image: none;
+      box-shadow: none;
+
+      button:before, button:after {
+        background: $mikadoYellow;
+      }
+    }
+  }
 }
 // End modal navigation
 
@@ -93,6 +112,20 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+    }
+  }
+
+  &.policy .modal-request__in {
+    width: 80%;
+
+    text-align: left;
+
+    .policy__heading {
+      margin-bottom: 40px;
+    }
+    
+    p {
+      margin-top: 20px;
     }
   }
 
@@ -203,3 +236,167 @@
   }
 }
 // End modal request
+
+.modal-double {
+  position: fixed;
+  z-index: z('modal');
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($dark, .9);
+  display: none;
+
+  &__in {
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: $white;
+    border-radius: 10px;
+    text-align: center;
+    z-index: z('content');
+    display: flex;
+  }
+
+  &__form-side {
+    flex-basis: 360px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: z('content');
+    background: $white;
+  }
+
+  &__content-side {
+    flex-basis: calc(100% - 360px);
+    position: relative;
+  }
+
+  .modal-request__communications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-checkbox {
+    width: 240px;
+  }
+
+  &.present {
+    background-color: rgba(255, 255, 255, 1);
+    overflow: hidden;
+  }
+
+  &__present-bg-1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 470px;
+    width: 540px;
+    background: 50% 50%/contain no-repeat url('../images/Gift.png');
+    z-index: z('bg');
+  }
+
+  &__header-bg-1 {
+    position: absolute;
+    left: 5px;
+    top: 15px;
+    width: 90px;
+    height: 195px;
+    background: 50% 50%/contain no-repeat url('../images/Balloon.png');
+    z-index: z('bg');
+  }
+
+  &__header-bg-2 {
+    position: absolute;
+    right: 0px;
+    top: 25px;
+    width: 60px;
+    height: 150px;
+    background: 50% 50%/contain no-repeat url('../images/Balloon 2.png');
+    z-index: z('bg');
+  }
+
+  &__header-bg-3 {
+    position: absolute;
+    right: 95px;
+    top: 100px;
+    width: 135px;
+    height: 80px;
+    background: 50% 50%/contain no-repeat url('../images/Cap.png');
+    z-index: z('bg');
+  }
+
+  &__present-text {
+    position: absolute;
+    z-index: z('content');
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 390px;
+    height: 105px;
+
+    &:before, &:after {
+      @include pseudo;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:before {
+      top: 8px;
+      background: 0px -10px/100% auto no-repeat url('../images/50-2.svg');
+    }
+
+    &:after {
+      top: 0;
+      background: 50% 50%/contain no-repeat url('../images/50.svg');
+    }
+  }
+
+  &__present-text-desc {
+    bottom: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  &__action-img {
+    height: 332px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__action-content {
+    padding: 30px;
+
+    p {
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 20px;
+      text-align: left;
+    }
+  }
+
+  &__action-title {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}

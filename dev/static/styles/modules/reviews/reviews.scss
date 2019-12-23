@@ -4,7 +4,7 @@
   background: $oldLace;
 
   .section-heading {
-    padding-left: 40%;
+    padding-left: 30%;
   }
 
   &__top-bg-gradient {
@@ -19,6 +19,18 @@
   .swiper-slide {
     display: flex;
     justify-content: center;
+
+    .reviews__slide-img {
+      opacity: 0;
+      transition: .3s ease;
+    }
+  }
+
+  .swiper-slide-active {
+    .reviews__slide-img {
+      opacity: 1;
+      transition: .3s ease;
+    }
   }
 
   &__slide-content {
@@ -42,6 +54,25 @@
 
   &__slider {
     margin-top: 60px;
+
+    &:before {
+      @include pseudo;
+      left: 230px;
+      top: 130px;
+      width: 110px;
+      height: 110px;
+      z-index: 5;
+      background: 50% 50%/contain no-repeat url('../images/reviews/quote.png');
+    }
+
+    &:after {
+      @include pseudo;
+      right: 110px;
+      top: 60px;
+      width: 90px;
+      height: 110px;
+      background: 50% 50%/contain no-repeat url('../images/reviews/Heart.png');
+    }
   }
 
   &__slide-in {
@@ -52,11 +83,11 @@
 
   &__slide-img {
     position: absolute;
-    left: -170px;
+    left: -60px;
     top: 50%;
     transform: translateY(-50%);
-    width: 340px;
-    height: 720px;
+    width: 230px;
+    height: 580px;
     background: 50% 50%/contain no-repeat url('../images/reviews/phone.png');
     z-index: z('up-content');
   }
@@ -127,13 +158,49 @@
     }
   }
 
-  .swiper-button-prev, .swiper-button-next {
+  &__bt-n, &__bt-p {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
     top: auto;
     bottom: 50px;
     width: 40px;
     height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: z('content');
+
+    &:before {
+      @include pseudo;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #ecae00;
+      border-radius: 50%;
+    }
+  }
+
+  &__bt-n {
+    right: 200px;
+  }
+
+  &__bt-p {
+    right: 270px;
+    left: auto;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    width: 40px;
+    height: 40px;
     background-image: linear-gradient(rgba(255, 217, 144, 1) 0%, rgba(252, 191, 18, 1) 100%);
     border-radius: 50%;
+    left: 0;
+    top: 20px;
+    transition: .3s ease;
 
     &:after {
       font-size: 16px;
@@ -142,20 +209,38 @@
       left: 50%;
       transform: translate(-50%, -50%);
       position: absolute;
+      font-weight: 600;
+    }
+
+    &:hover {
+      width: 44px;
+      height: 44px;
     }
   }
 
   &__swiper-container {
     position: relative;
+
+    &:after {
+      @include pseudo;
+      left: -90px;
+      top: -240px;
+      width: 160px;
+      height: 570px;
+      background: 50% 50%/contain no-repeat url('../images/reviews/Iphone-smile.png');
+    }
   }
 
-  .swiper-button-next {
-    right: 200px;
-  }
+  .swiper-button-next, .swiper-button-prev {
+    transition: .3s ease;
 
-  .swiper-button-prev {
-    right: 270px;
-    left: auto;
+    &:hover {
+      box-shadow: 0px 10px 30px 0px rgba(251, 180, 44, 0.4);
+
+      &:after {
+        font-size: 18px;
+      }
+    }
   }
 
   &__bottom-bg {
@@ -163,8 +248,52 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 240px;
     // z-index: z('up-content');
     background: 50% 100%/contain no-repeat url('../images/reviews/bg.png');
+    z-index: z('up-content');
+  }
+
+  .swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    right: 160px;
+    left: auto !important;
+    width: 15px !important;
+    bottom: auto !important;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    margin-top: 10px !important;
+    background-color: rgba(230, 230, 230, 1);
+    opacity: 1;
+    position: relative;
+    transition: .3s ease;
+
+    &:before {
+      @include pseudo;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 12px;
+      background-image: linear-gradient(rgba(255, 217, 144, 1) 0%, rgba(252, 191, 18, 1) 100%);
+      transition: .3s ease;
+      opacity: 0;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $white;
+
+    &:before {
+      opacity: 1;
+    }
   }
 }

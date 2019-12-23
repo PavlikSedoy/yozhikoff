@@ -1,0 +1,6 @@
+.actions {
+  &__slider {
+    margin-left: calc((100% - 720px)*.5);
+    width: calc((100% - 720px)*.5 + 720px);
+  }
+}
