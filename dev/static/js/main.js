@@ -3488,7 +3488,7 @@ $(document).ready(function () {
     $(freePhone).add('#PresentPhone').add('#actionPhone').add('#callbackPhone').add('#questionsPhone').inputmask({"mask": "+38 (999) 999-99-99",showMaskOnHover: false,
     showMaskOnFocus: true});
 
-    $(callbackBtn).add(whyRequest).add(resultRequestBtn).add('#navRequest').click( function(e) {
+    $(callbackBtn).add(whyRequest).add(resultRequestBtn).add('#navRequest').add('#freeAdmissionBtn3').click( function(e) {
         e.stopPropagation();
 
         $(callbackModal).fadeIn();
@@ -3688,5 +3688,13 @@ $(document).ready(function () {
         var targetOffset = $(window).scrollTop();
 
         targetOffset > 100 ? $('.scroll').fadeOut() : $('.scroll').fadeIn();
+    });
+
+    setTimeout( function() {
+        $('#presentModal').fadeIn();
+    }, 15000);
+
+    $('#presentInModal').add('#actionInModal').click( function() {
+        $(this).parent().parent().next().fadeIn();
     });
 });

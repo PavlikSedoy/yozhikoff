@@ -34,4 +34,8 @@
   .section-heading__naming {
     text-align: left;
   }
+
+  &__bg {
+    background: 50% 50%/contain no-repeat url('../images/benefits/Bg-price.png');
+  }
 }

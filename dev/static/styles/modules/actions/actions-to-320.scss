@@ -16,7 +16,7 @@
   // }
 
   .actions__sw-p, .actions__sw-n {
-    bottom: -490px;
+    bottom: -440px;
     z-index: 2;
   }
 
@@ -71,4 +71,23 @@
   &__slide-img-wr {
     height: auto;
   }
+
+  &__bg {
+    background: 50% 50%/contain no-repeat url('../images/actions/Bg-sale.png');
+  }
+
+  .section-heading {
+    z-index: z('content');
+    position: relative;
+  }
+}
+
+.actions__slide-before-date {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  height: calc(100% + 36px);
+  width: 125%;
+  background: -33px -21px/124% auto no-repeat url(../images/actions/Date-new-2.svg);
+  z-index: -1;
 }

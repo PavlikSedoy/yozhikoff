@@ -65,6 +65,80 @@
   @import "questions/questions-to-768.scss";
   @import "footer/footer-to-768.scss";
   @import "actions/actions-to-768.scss";
+
+  .modal-double {
+    &__in {
+      width: 360px;
+      height: 100%;
+      border-radius: 0;
+    }
+
+    &__content-side {
+      flex-basis: 100%;
+    }
+
+    &__form-side {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__present-bg-1 {
+      bottom: 90px;
+    }
+
+    &__header-bg-2 {
+      display: none;
+    }
+
+    &__header-bg-3 {
+      right: 25px;
+    }
+
+    &__present-text {
+      top: 40%;
+
+      &:before, &:after {
+        width: 300px;
+        left: 50px;
+      }
+
+      &:before {
+        top: 21px;
+        background: -6px -10px/104% auto no-repeat url("../images/50-2.svg");
+      }
+    }
+
+    &__present-btn {
+      display: block;
+      width: 316px;
+      height: 80px;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__action-btn {
+      display: block;
+      position: relative;
+      margin: auto;
+      margin-top: 20px;
+      width: 316px;
+      height: 80px;
+      margin-bottom: 40px;
+      z-index: 1;
+    }
+
+    &__action-img {
+      object-fit: none;
+      height: auto;
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -107,5 +181,9 @@
     transform: translate(0,0);
     left: 0;
     top: 0;
+  }
+
+  .modal-nav__close {
+    margin-top: 50px;
   }
 }

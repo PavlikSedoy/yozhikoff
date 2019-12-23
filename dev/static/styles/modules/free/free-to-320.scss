@@ -8,7 +8,7 @@
   &__girl-bg-img {
     width: 260%;
     left: -120px;
-    top: 190px;
+    top: 260px;
   }
 
   &:before {
@@ -31,6 +31,11 @@
 
   &__form {
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    top: 730px;
+  }
+
+  &__form-row {
+    height: 945px;
   }
 }
 

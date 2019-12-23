@@ -23,4 +23,8 @@
     top: -40px;
     right: 20px;
   }
+
+  &__bg {
+    background: 50% 50%/contain no-repeat url('../images/result/Bg-result.png');
+  }
 }

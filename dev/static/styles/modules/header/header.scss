@@ -274,7 +274,7 @@
     transition: .5s ease;
     z-index: z('bg');
     background: 50% 50%/cover no-repeat url('../images/svg/Border-1.svg');
-    box-shadow: -10px 10px 37px -6px rgba(0,0,0,0);
+    box-shadow: -10px 10px 37px -6px rgba($mikadoYellow, 0);
   }
 
   &:after {
@@ -295,7 +295,7 @@
 
     &:before {
       background-image: linear-gradient(45deg, rgba(252, 191, 18, 1) 0%, #ffd990 45%, transparent 75%);
-      box-shadow: -10px 10px 37px -6px rgba(0,0,0,0.18);
+      box-shadow: -10px 10px 37px -6px rgba($mikadoYellow,0.6);
     }
 
     .play-btn__icon {

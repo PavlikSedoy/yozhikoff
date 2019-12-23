@@ -146,6 +146,11 @@
 
 .modal-double#presentModal
   .modal-double__in
+    .modal-request__close
+      .close.close__type_3d.close__color_gray
+        .close__bg
+        .close__3d
+        button.modal-request__close(type="button")
     .modal-double__content-side.present
       .modal-double__present-bg-1
       .modal-double__header-bg-1
@@ -153,13 +158,11 @@
       .modal-double__header-bg-3
       .modal-double__present-text
         .modal-double__present-text-desc твой подарочек<br>на первое посещение
+      .btn.modal-double__present-btn
+        button.btn__btn#presentInModal(type="button") Участвовать в акции
+        .btn__3d
     .modal-double__form-side
       .modal-request__in-border
-      .modal-request__close
-        .close.close__type_3d.close__color_gray
-          .close__bg
-          .close__3d
-          button.modal-request__close(type="button")
       .modal-request__heading
         h3.modal-request__title Оставьте заявку
         .modal-request__desc
@@ -204,6 +207,11 @@
 
 .modal-double#actionModal
   .modal-double__in
+    .modal-request__close
+      .close.close__type_3d.close__color_gray
+        .close__bg
+        .close__3d
+        button.modal-request__close(type="button")
     .modal-double__content-side.action
       .modal-double__action-img
         img#actionImage(src="", alt="Action")
@@ -213,13 +221,11 @@
         //- p Оплати один сеанс лазерной эпиляции любых зон, приходи вместе с подругой и сделай процедуру вдвоем на одинаковые зоны без каких-либо доплат. 
 
         //- p А кто, кому и что должен разберетесь между собой потом… по-дружески)
+      .btn.modal-double__action-btn
+        button.btn__btn#actionInModal(type="button") Участвовать в акции
+        .btn__3d
     .modal-double__form-side
       .modal-request__in-border
-      .modal-request__close
-        .close.close__type_3d.close__color_gray
-          .close__bg
-          .close__3d
-          button.modal-request__close(type="button")
       .modal-request__heading
         h3.modal-request__title Оставьте заявку
         .modal-request__desc
